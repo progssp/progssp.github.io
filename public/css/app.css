@@ -886,8 +886,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 15px;
+  padding:0 10px 15px 10px;
   border-radius: 10px;
+  text-align: center;
 }
 .places_to_visit_slider .swiper-slide:hover {
   transform: scale(1.05,1.05);
@@ -927,57 +928,20 @@ body{
 
 
 
-.activities {
-  margin:100px 50px;
-}
 
-.activities .title {
-  font-size: 25px;
-}
 
-.activities .subtitle {
-  font-size: 20px;
-}
-
-.activities .content {
-  font-size: 18px;
-}
-.activities_slider {
-  width:auto;
-  height:auto;
-  margin-top: 20px;
-  padding:20px;
-}
-
-.activities_slider .swiper-slide {
-  font-size:25px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  width:300px;
-  height:300px;
-  border-radius: 30px;
-  transition: 0.3s;
-  padding:10% 0;
-}
-.activities_slider .swiper-slide:hover {
-  transform: scale(1.05,1.05);
-  cursor: pointer;
-}
-.activities_slider .swiper-button-next,.activities_slider .swiper-button-prev,.activities_slider .swiper-pagination-bullet {
-  color:rgb(255, 255, 255);
-  background-color: aquamarine;
-  border-radius: 10px;
-  width:auto;
-  height: auto;
+.itineraries_cards {
+  display:inline-block;
+  margin: 10px 5px;
   padding: 10px;
 }
-
-.activities_slider .swiper-pagination-bullet {
-  color:white;
-  background-color: white;
+.itineraries_cards div {
+  display: inline-block;
+  width:100%;
+  height:300px;
+  margin: 5px;
+  align-self: center;
 }
-
 
 
 
@@ -1026,6 +990,12 @@ body{
     font-size:2em;
     height:400px;
   }
+  .itineraries_cards div {
+    display: inline-block;
+    width:46%;
+    height:300px;
+    margin: 10px;
+  }
 }
 
 @media screen and (min-width:768px){
@@ -1044,6 +1014,13 @@ body{
     color: white;
     text-align: center;
     padding:25% 0;
+  }
+  
+  .places_to_visit .title {
+    font-size:2em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 50px;
   }
 }
 
@@ -1079,5 +1056,15 @@ body{
     height:auto;
     margin-top: 20px;
     padding:20px 50px;
+  }
+
+  .itineraries_cards {
+    margin:10px 50px;
+  }
+  .itineraries_cards div {
+    display: inline-block;
+    width:400px;
+    height:300px;
+    margin: 10px;
   }
 }
