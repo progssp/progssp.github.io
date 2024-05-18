@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/sample_design/public/css/app.css">
+    <title>FS</title>
+</head>
+<body class="poppins-regular">
+    <div class="topbar">
+        <span>Welcome to Fortshila</span>
+        <div>
+            <span style="margin:0 10px;"><i style="margin:0 5px;" class="fas fa-phone"></i>+91 8005656317</span>
+            <span style="margin:0 10px;"><i style="margin:0 5px;" class="fas fa-phone"></i>+91 8005656317</span>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div>
+            <button class="menu_btn" onclick="show_mobile_menu()"><i class="fas fa-bars"></i></button>
+            
+            <div class="logo_div">
+                <img style="display:inline;" src="/sample_design/public/images/logo.png" alt="" />
+            </div>
+        </div>
+
+        <div class="menu_div">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About</a></div>
+            <div id="iti_menu_handle">
+                <a href="#">Itineraries</i></a>
+                <div style="position: absolute;">
+                    <ul class="submenu" id="iti_menu">
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div><a href="#">Places</a></div>
+            <div><a href="#">Activites</a></div>
+            <div><a href="#">Gallery</a></div>
+            <div><a href="#">Contact</a></div>
+        </div>
+        <div class="menu_btn_div">
+            <button class="plan_btn">Plan your tour</button>
+        </div>
+    </div>
+
+
+    <div class="navbar_mobile">
+        <div class="menu_div">
+            <div onclick="close_mobile_menu()" class="plan_btn"><i class="fas fa-close"></i></div>
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About us</a></div>
+            <div>
+                <a href="#">Itineraries</i></a>
+                <div style="position: relative;display: none;">
+                    <ul style="position: relative;top:1px;background-color: aqua;">
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                        <li><a href="#">Sample iti 1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div><a href="#">Group Tours</a></div>
+            <div><a href="#">Gallery</a></div>
+            <div><a href="#">Contact</a></div>
+
+            
+        </div>
+        <div class="menu_btn_div">
+        </div>
+    </div>    
+
+
+    <div class="swiper home_slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/home_slider/slider1.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <span>Explore Traditions, culture</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/home_slider/slider2.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <span>Explore Historical Sites</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/home_slider/slider3.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <span>Explore echoing mountains</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/home_slider/slider4.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <span>Explore peaceful woods</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/home_slider/slider5.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <span>Explore Flora and fauna</span>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!--
+        <section class="about">
+            <p class="title">About FortShila</p>
+            <p class="content">
+                “Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                </p>
+            <p class="title">Why FortShila</p>
+            <p class="content">
+                We at FortShila are experienced travelers who collaborated our Travel ideas to provide best travelling experience to our voyager. We are focused in our work will provide you best Tours and Travel services. With individual experience in this field we have earned competitive advantage and plenty appreciation from the travel industry. You can try and prove us wrong! Hopefully we will satisfy your needs and requirements.
+            </p>
+        </section> 
+    -->
+
+    <section class="places_to_visit">
+        <p class="title">Places to visit</p>
+        <div class="swiper places_to_visit_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Desert</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Mountains</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Forest</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Beaches</span>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="places_to_visit">
+        <p class="title">What you can do in India (Activities)</p>
+        <div class="swiper places_to_visit_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/activities_slider/cricket.jpg');background-position: center;background-repeat: no-repeat;background-size:cover">
+                    <span>Play cricket</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/activities_slider/diving.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Under water diving</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/activities_slider/kite_flying.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Kite Flying</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/activities_slider/skiing.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Ice Skiing</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('/sample_design/public/images/activities_slider/yoga.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Yoga</span>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/sample_design/public/js/app.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home_slider", {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: "fade",
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var swiper = new Swiper(".places_to_visit_slider", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+
+        var swiper = new Swiper(".activities_slider", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+            }
+        });
+    </script>
+</body>
+</html>
