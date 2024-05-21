@@ -1,0 +1,53 @@
+@media screen and (min-width:1024px){
+    .navbar .menu_div {
+      display: flex;
+    }
+  
+    .navbar .menu_btn{
+      display:none;
+    }
+  
+    .home_slider {
+      width:auto;
+      height: 600px;
+    }
+  
+    .places_to_visit {
+      margin:100px 35px;
+    }
+
+    .places_to_visit .title {
+      font-size:2em;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 50px;
+    }
+    
+    
+    
+    .places_to_visit_slider {
+      width:auto;
+      height:auto;
+      margin-top: 20px;
+      padding:20px 50px;
+    }
+
+    .cards-title {
+      font-size:2em;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 80px;
+    }
+  
+    
+    .itineraries_cards {
+      justify-content:space-between;
+      margin:0 80px;
+    }
+    .itineraries_cards div {
+      width:24%;
+      height:400px;
+      margin:10px 0;
+      font-size:1.5em;
+    }
+  }

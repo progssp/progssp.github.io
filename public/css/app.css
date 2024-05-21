@@ -662,10 +662,91 @@ video {
   font-style: italic;
 }
 
+
+.titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.titillium-web-light {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titillium-web-light-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.titillium-web-regular-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.titillium-web-bold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+:root {
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(236, 236, 236);
+  --navbar-background-color: rgb(0, 138, 213);
+  --navbar-submenu-background-color: rgba(19, 19, 19, 0.96);
+  --navbar-submenu-handle-background-color: var(--navbar-submenu-background-color);
+  --navbar-button-bgcolor: rgb(99, 161, 29);
+  --navbar-button-text-color: var(--text-color);
+
+  --navbar-mobile-background-color: var(--navbar-background-color);
+}
+
 /* by default mobile view */
 body{
   overflow-x: hidden;
   height: 100vh;
+  background-color: var(--background-color);
 }
 
 .topbar {
@@ -683,7 +764,7 @@ body{
   flex-wrap: wrap;
   justify-content: space-between;
   padding:5px 30px;
-  background-color:rgb(255, 255, 255);
+  background-color:var(--navbar-background-color);
   box-shadow: 0 0 50px rgba(0,0,0,0.12);
   color: rgb(12,60,96);
 }
@@ -699,26 +780,72 @@ body{
 
 .navbar .menu_div div{
   align-self: center;
+  padding:15px 0;
 }
 
 .navbar .menu_div a{
   align-self: center;
   font-size: 18px;
   padding:0;
-  margin: 0 10px;
+  margin:10px;
+  color: var(--text-color);
 }
-
-
-.submenu {
-  display: none;
-  position: relative;
-  top:1px;
-  padding:10px;
-  background-color: rgb(6, 140, 242);
-}
-
-.submenu > li {
+.handle-on-submenu-open{
+  background-color:var(--navbar-submenu-handle-background-color);
+  color:white;
   padding:5px;
+}
+
+
+.navbar .submenu {
+  display:none;
+  position: relative;
+  width:auto;
+  margin: 0;
+  padding:0px 10px;
+  background-color:var(--navbar-submenu-background-color);
+  z-index: 100;
+  box-shadow: 0 5px 5px rgb(0,0,0);
+  transform: translateY(0);
+}
+.navbar .submenu-open {
+}
+
+.navbar .submenu > li {
+  padding:5px 0;
+  color: white;
+}
+.navbar .submenu > li:hover {
+  color: white;
+}
+
+
+.submenu-slider {
+  width:auto;
+  height:auto;
+  margin:0;
+  padding:0;
+}
+.submenu-slider .swiper-slide {
+  font-size:1.5em;
+  font-weight: bold;
+  color: white;
+  width:auto;
+  height:300px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding:0 10px 15px 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+}
+.submenu-slider .swiper-slide:hover {
+  transform: scale(1.05,1.05);
+  cursor: pointer;
+  box-shadow:0 0 20px rgba(0,0,0,0.12);
 }
 
 .navbar .menu_btn_div {
@@ -730,25 +857,28 @@ body{
   align-self: center;
   background-color:transparent;
   font-size: 20px;
+  color: var(--text-color);
 }
 
 .navbar .menu_btn_div .plan_btn{
   align-self: center;
-  background-color:rgb(199, 157, 86);
+  background-color:var(--navbar-button-bgcolor);
+  color: var(--navbar-button-text-color);
   padding: 10px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.42);
 }
 
 .navbar_mobile {
-  transition: 0.2s;
+  transition: 0.3s ease-in-out;
   display:block;
   position: absolute;
   top:0;
   left:0;
   height:100vh;
   box-sizing: border-box;
-  background-color: rgba(250, 235, 215,0.96);
+  background-color: var(--navbar-mobile-background-color);
   box-shadow: 0 0 100px rgba(0,0,0,0.12);
   width:300px;
   z-index: 100;
@@ -766,31 +896,64 @@ body{
 }
 
 .navbar_mobile .menu_div div {
-  margin: 10px 0;
-  align-self:center;
+  margin:0;
+  padding:15px;
 }
 
 .navbar_mobile .menu_div a {
-  align-self: center;
   font-size: 20px;
-  margin: 10px 0;
+  margin:0;
+  display:block;
+  text-align: justify;
+  color: var(--text-color);
 }
 
 .navbar_mobile .menu_btn_div {
   display: flex;
 }
 
-.navbar_mobile .menu_div .plan_btn {
+.navbar_mobile .menu_div .close_btn {
   cursor: pointer;
   align-self: flex-start;
-  background-color:rgb(199, 157, 86,0.8);
+  background-color:rgb(199, 157, 86,0.1);
   padding: 10px;
   border-radius: 10px;
   font-weight:600;
-  margin-top: 55px;
+  font-size: 25px;
+  margin-top: 35px;
   margin-left: 20px;
+  color: white;
 }
 
+.navbar_mobile .submenu {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.navbar_mobile .submenu-open {
+  /* display: flex; */
+}
+
+.navbar_mobile .submenu li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.navbar_mobile .submenu li div {
+  width:100%;
+  height:300px;
+  background-position: center;
+  background-size: cover;
+  margin:10px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 90px 90px 0 0;
+  align-items: flex-end;
+  color:white;
+  font-size: 20px;
+}
 
 
 .home_slider {
@@ -803,7 +966,10 @@ body{
   font-weight: bold;
   color: white;
   text-align: center;
-  padding:30% 0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home_slider .swiper-button-next::after {
   color:rgb(255, 255, 255);
@@ -853,7 +1019,7 @@ body{
 
 
 .places_to_visit {
-  margin:100px 5px;
+  margin:5px 5px;
 }
 
 .places_to_visit .title {
@@ -925,146 +1091,79 @@ body{
   background-color: white;
 }
 
-
-
-
+.cards-title {
+  font-size:1.5em;
+  font-weight: bold;
+  text-align: center;
+}
 
 
 .itineraries_cards {
-  display:inline-block;
-  margin: 10px 5px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  margin:0 10px;
+  padding:0;
 }
+
+
 .itineraries_cards div {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width:100%;
-  height:300px;
-  margin: 5px;
-  align-self: center;
+  height:400px;
+  margin:10px 0;
+  border-radius: 15px;
+  color: white;
+  font-size:1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding:15px 14px;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  transition: all 0.3s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.itineraries_cards div:hover{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transform: scale(1.06);
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width:640px){
-  .topbar {
-    justify-content: space-between;
-    padding:5px 50px;
-  }
-  
-  .navbar .logo_div{
-    width: 200px;
-    display: inline-block;
-  }
-  .home_slider {
-    width:auto;
-    height: 400px;
-  }
-  
-  .home_slider .swiper-slide {
-    font-size:2em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding:20% 0;
-  }
-  .places_to_visit .title {
-    font-size:2em;
-    font-weight: bold;
-  }
-  .places_to_visit_slider .swiper-slide {
-    font-size:2em;
-    height:400px;
-  }
-  .itineraries_cards div {
-    display: inline-block;
-    width:46%;
-    height:300px;
-    margin: 10px;
-  }
+.query_form {
+  background-color: rgba(188, 188, 188, 0.798);
+  padding: 20px 0;
+  z-index:10;
+  width: 100%;
 }
-
-@media screen and (min-width:768px){
-  .topbar {
-    justify-content: space-between;
-    padding:5px 50px;
-  }
-  .home_slider {
-    width:auto;
-    height: 400px;
-  }
-  
-  .home_slider .swiper-slide {
-    font-size:2em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding:25% 0;
-  }
-  
-  .places_to_visit .title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 50px;
-  }
+.query_form form {
+  display: flex;
+  flex-direction: column;
 }
-
-@media screen and (min-width:1024px){
-  .navbar .menu_div {
-    display: flex;
-  }
-
-  .navbar .menu_btn{
-    display:none;
-  }
-
-  .home_slider {
-    width:auto;
-    height: 600px;
-  }
-  .home_slider .swiper-slide {
-    font-size:4em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding:15% 0;
-  }
-
-  .places_to_visit {
-    margin:100px 35px;
-  }
-  
-  
-  
-  .places_to_visit_slider {
-    width:auto;
-    height:auto;
-    margin-top: 20px;
-    padding:20px 50px;
-  }
-
-  .itineraries_cards {
-    margin:10px 50px;
-  }
-  .itineraries_cards div {
-    display: inline-block;
-    width:400px;
-    height:300px;
-    margin: 10px;
-  }
+.query_form form div{
+  margin:10px 15px;
+}
+.query_form form div label{
+  display: block;
+  font-size: 20px;
+}
+.query_form form div select,
+.query_form form div input[type=date],
+.query_form form div input[type=number]{
+  padding:10px;
+  font-size: 16px;
+  width: 100%;
+}
+.query_form form div input[type=submit]{
+  padding:10px;
+  margin:30px 0 0 0;
+  font-size: 16px;
+  background-color: var(--navbar-button-bgcolor);
+  color: var(--navbar-button-text-color);
+  width: 200px;
 }
