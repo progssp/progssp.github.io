@@ -1,43 +1,53 @@
 @media screen and (min-width:640px){
-    .topbar {
-      justify-content: space-between;
-      padding:5px 50px;
-    }
-    
-    .navbar .logo_div{
-      width: 200px;
-      display: inline-block;
-    }
-    .home_slider {
-      width:auto;
-      height: 400px;
-    }
-    
-    .home_slider .swiper-slide {
-      font-size:2em;
-      font-weight: bold;
-    }
-    .places_to_visit .title {
-      font-size:2em;
-      font-weight: bold;
-    }
-    .places_to_visit_slider .swiper-slide {
-      font-size:2em;
-      height:400px;
-    }
-
-    .cards-title {
-      font-size:2em;
-      font-weight: bold;
-    }
-    
-    .itineraries_cards {
-      justify-content:space-between;
-      margin:0 10px;
-    }
-    .itineraries_cards div {
-      width:49%;
-      height:400px;
-      margin:10px 0;
-    }
+  .topbar {
+    justify-content: space-between;
+    padding:5px 30px;
   }
+  .navbar {
+    padding:5px 30px;
+  }
+
+  .navbar .logo_div img{
+    width: 200px;
+    display: inline-block;
+  }
+  .home_slider {
+    width:auto;
+    height: 400px;
+  }
+
+  .home_slider .swiper-slide {
+    font-size:2em;
+    font-weight: bold;
+  }
+  .places_to_visit .title {
+    font-size:2em;
+    font-weight: bold;
+  }
+  .places_to_visit_slider .swiper-slide {
+    font-size:2em;
+    height:400px;
+  }
+
+  
+  .popular_cities .title {
+    font-size:2em;
+    font-weight: bold;
+  }
+  .popular_cities_slider .swiper-slide {
+    font-size:2em;
+    height:400px;
+  }
+
+  .cards-title {
+    font-size:2em;
+    font-weight: bold;
+  }
+
+
+  .itineraries_cards .card {
+    width:48%;
+    height: auto;
+    margin:15px 5px;
+  }
+}

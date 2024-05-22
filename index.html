@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/images/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -10,9 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/640px.css">
     <link rel="stylesheet" href="public/css/768px.css">
     <link rel="stylesheet" href="public/css/1024px.css">
+    <link rel="stylesheet" href="public/css/1200px.css">
     <title>FS</title>
 </head>
 <body class="titillium-web-regular">
@@ -25,11 +28,11 @@
     </div>
 
     <div class="navbar">
-        <div>
+        <div style="display: flex;">
             <button class="menu_btn" onclick="show_mobile_menu()"><i class="fas fa-bars"></i></button>
             
             <div class="logo_div">
-                <img style="display:inline;" src="public/images/logo.png" alt="" />
+                <img src="public/images/logo.png" alt="" />
             </div>
         </div>
 
@@ -137,7 +140,7 @@
         </div>
     </div>
 
-
+    
     <div class="navbar_mobile">
         <div class="menu_div">
             <div onclick="close_mobile_menu()" class="close_btn"><i class="fas fa-close"></i></div>
@@ -148,22 +151,22 @@
                 
                 <ul class="submenu" id="iti_mobile_menu">
                     <li>
-                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');">
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/golden_triangle.jpg');">
                             <span>Golden Triangle</span>
                         </div>
                     </li>
                     <li>
-                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');">
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/forts-and-palaces.jpg');">
                             <span>Fort and palaces of India</span>
                         </div>
                     </li>
                     <li>
-                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');">
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');">
                             <span>Tastes of Rajasthan</span>
                         </div>
                     </li>
                     <li>                        
-                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');">
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/plan-your-trip.jpg');">
                             <span>Plan trip</span>
                         </div>
                     </li>
@@ -175,22 +178,22 @@
                 
                 <ul class="submenu" id="places_mobile_menu">
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
                             <span>Desert</span>
                         </div>
                     </li>
                     <li>
-                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
                         <span>Mountains</span>
                     </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
                             <span>Forest</span>
                         </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
                             <span>Beaches</span>
                         </div>
                     </li>
@@ -202,27 +205,27 @@
                 
                 <ul class="submenu" id="activities_mobile_menu">
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/cricket.jpg');background-position: center;background-repeat: no-repeat;background-size:cover">
-                            <div class="content"><span>Play cricket</span></div>
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/cricket.jpg');">
+                            <span>Play cricket</span>
                         </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/diving.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/diving.jpg');">
                             <span>Under water diving</span>
                         </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/kite_flying.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/kite_flying.jpg');">
                             <span>Kite Flying</span>
                         </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/skiing.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/skiing.jpg');">
                             <span>Ice Skiing</span>
                         </div>
                     </li>
                     <li>
-                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/yoga.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/yoga.jpg');">
                             <span>Yoga</span>
                         </div>
                     </li>
@@ -307,10 +310,12 @@
                 <input type="number" name="" id="" />
             </div>
             <div>
-                <input type="submit" value="Find tours" />
+                <button type="submit"><i class="fas fa-search"></i> Find tours</button>
             </div>
         </form>
     </section>
+
+    
 
     <section class="places_to_visit">
         <p class="title">Places to visit</p>
@@ -341,23 +346,119 @@
         </div>
     </section>
 
-    <section>
+    <section style="background-color: #9bf3fd;">
         <p class="cards-title">Check out the tours we provide</p>
         <section class="itineraries_cards">
-            <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');">
-                <span>Golden Triangle</span>
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Golden Triangle</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+                
+                
             </div>
-            <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');">
-                <span>Fort and palaces of India</span>
+            
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Forts & palaces</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
             </div>
-            <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');">
-                <span>Tastes of Rajasthan</span>
+
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Taste of Rajasthan</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
             </div>
-            <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');">
-                <span>Plan trip</span>
+            
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Forts & palaces</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Taste of Rajasthan</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Forts & palaces</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title">Taste of Rajasthan</span>
+                    <span class="location">Delhi - Agra - Jaipur</span>
+                    <div class="action">
+                        <span class="location">USD 1000</span>
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');"></div>
+                
+                <div class="card-footer">
+                    <span class="title" style="text-align: center;">Plan your trip</span>
+                    <div class="action" style="justify-content: center;">
+                        <button class="btn">Plan now</button>
+                    </div>
+                </div>
+            </div>
+
+                
+                
+
         </section>
     </section>
+    
 
     <section class="places_to_visit">
         <p class="title">What you can do in India (Activities)</p>
@@ -385,8 +486,79 @@
         </div>
     </section>
 
+    <section class="popular_cities">
+        <p class="title">Popular Cities</p>
+        <div class="swiper popular_cities_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Jodhpur</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/jaipur.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Jaipur</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/jaisalmer.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Jaisalmer</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/udaipur.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Udaipur</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/ranthambor.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Sujangarh</span>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/bikaner.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <span>Bikaner</span>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div>
+            <img src="public/images/logo.png"/>
+            <p>
+                There are many variations of passages of Lorem the Ipsum available but it is the majority of suffered that a alteration in that some dummy text.
+            </p>
+            <div>
+                <span><i class="fa-brands fa-facebook"></i></span>
+                <span><i class="fa-brands fa-twitter"></i></span>
+                <span><i class="fa-brands fa-youtube"></i></span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+            </div>
+        </div>
+        <div>
+            <span>Support</span>
+            <div class="footer-links">
+                <a href="#">Customer support</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+        <div>
+            <span style="display: block;">Support</span>
+            <div class="footer-links">
+                <a href="#">Customer support</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+        <div>
+            <span style="display: block;">Support</span>
+            <div class="footer-links">
+                <a href="#">Customer support</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+    </section>
+
     
     
+
+    
+    <div class="backdrop"></div>
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="public/js/app.js"></script>
 
@@ -416,6 +588,40 @@
         var swiper = new Swiper(".places_to_visit_slider", {
             slidesPerView: 2,
             spaceBetween: 15,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+        var swiper = new Swiper(".popular_cities_slider", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
            
             lazy: true,
             loop: true,

@@ -1,0 +1,12 @@
+@media screen and (min-width:1200px){
+  
+    .itineraries_cards {
+      padding: 0 50px;
+      justify-content:center;
+    }
+    .itineraries_cards .card {
+      width:320px;
+      height: auto;
+      margin:15px 10px;
+    }
+  }
