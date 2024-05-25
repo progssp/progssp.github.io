@@ -30,6 +30,12 @@
   }
 
   
+  .blog_cards .title {
+    display: block;
+    font-size:2em;
+    font-weight: bold;
+  }
+  
   .popular_cities .title {
     font-size:2em;
     font-weight: bold;
@@ -49,5 +55,44 @@
     width:48%;
     height: auto;
     margin:15px 5px;
+  }
+
+  .card-container .card {
+    width: 48%;
+    margin: 15px 5px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:0 50px;
+    margin: 0;
+    /* background:url('/public/images/desert-transparent.jpg'); */
+    background-size:cover;
+    background-position:top;
+    background-repeat: no-repeat;
+  }
+  .footer div:nth-child(1){
+    width:200px;
+  }
+  .footer .footer-element{
+    color:rgb(20, 20, 20);
+    margin:20px;
+    width: auto;
+  }
+
+  .footer .under-footer {
+    height:80px;
+  }
+
+
+
+
+  .section-title {
+    font-size:2em;
+    font-weight: bold;
   }
 }

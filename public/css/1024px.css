@@ -12,16 +12,8 @@
     height: 600px;
   }
 
-  .places_to_visit {
-    margin:100px 35px;
-  }
+  
 
-  .places_to_visit .title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 50px;
-  }
   
   
   
@@ -29,21 +21,9 @@
     width:auto;
     height:auto;
     margin-top: 20px;
-    padding:20px 50px;
+    padding:20px 15px;
   }
 
-  
-  .popular_cities {
-    margin:100px 0;
-    padding: 25px 50px;
-  }
-
-  .popular_cities .title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 50px;
-  }
   
   
   
@@ -51,15 +31,10 @@
     width:auto;
     height:auto;
     margin-top: 20px;
-    padding:20px 50px;
+    padding:20px 15px;
   }
 
-  .cards-title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 80px;
-  }
+
 
   .itineraries_cards {
     padding: 0 50px;
@@ -72,6 +47,7 @@
   
   .query_form {
     margin: -50px 50px 0 50px;
+    padding: 20px 0;    
   }
 
   .query_form form div input[type=date]{
@@ -88,4 +64,51 @@
     width:200px;
     border: none;
   }
+
+
+  .card-container .card {
+    width:45%;
+    margin: 15px 10px;
+  }
+
+  .footer .under-footer {
+    height:150px;
+  }
+
+
+
+
+
+
+  .reviews .slider .swiper-slide {
+    background-color: #abceff;
+    font-size:1.5em;
+    font-weight: bold;
+    height:400px;
+    overflow-y:hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    border-radius:20px 0 20px 0;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+  .section-title {
+    font-size:2em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 50px;
+  }
+
+
+  
 }
