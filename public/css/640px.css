@@ -28,6 +28,7 @@
     font-size:2em;
     height:400px;
   }
+  
 
   
   .blog_cards .title {
@@ -94,5 +95,9 @@
   .section-title {
     font-size:2em;
     font-weight: bold;
+  }
+  .section-action .btn,.section-action .btn-secondary{
+    width:300px;
+    margin:0;
   }
 }

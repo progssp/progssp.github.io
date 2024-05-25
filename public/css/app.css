@@ -358,6 +358,7 @@ body{
 
 .places_to_visit {
   margin:0;
+  padding:20px 0;
 }
 
 .places_to_visit .title {
@@ -428,10 +429,11 @@ body{
   background-color: white;
 }
 
+
 .popular_cities {
   margin:0;
   background-color: #1A1A3D;
-  padding:30px 0;
+  padding:30px 0 50px 0;
 }
 
 .popular_cities .title {
@@ -512,6 +514,9 @@ body{
 }
 
 
+.itineraries{
+  padding:25px 0;
+}
 .itineraries_cards {
   display: flex;
   flex-wrap: wrap;
@@ -628,8 +633,12 @@ body{
   width:100%;
   border: none;
 }
-
-.query_form form div select,
+.query_form form div select{
+  padding:10px 5px;
+  font-size: 16px;
+  width:101.5%;
+  border: none;
+}
 .query_form form div input[type=number]{
   padding:10px 5px;
   font-size: 16px;
@@ -658,8 +667,8 @@ body{
 
 
 .blog{
-  background-color: #abceff;
-  padding:0 10px;
+  background-color: #abffe4;
+  padding:25px 0;
   margin: 0;
 }
 .blog .title {
@@ -678,7 +687,7 @@ body{
   justify-content: space-between;
   background-color: #3589ff;
   margin:0;
-  padding:0;
+  padding:50px 0;
 }
 .usp .content {
   display: flex;
@@ -730,19 +739,19 @@ body{
 }
 
 .reviews .slider .swiper-slide {
-  background-color: #abceff;
+  background-color: #f7d49c;
   font-size:1.5em;
   font-weight: bold;
-  height:400px;
-  overflow-y: scroll;
+  height:auto;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding:0;
-  border-radius:20px 0 20px 0;
+  border-radius:20px;
   text-align: center;
+  box-shadow: 0px 4px 40px rgba(43, 89, 255, 0.08);
 }
 .reviews .slider .swiper-slide .review-container{
   padding:50px 40px 0 40px;
@@ -792,7 +801,7 @@ body{
 .reviews .slider .swiper-pagination-bullet {
   color:rgb(255, 0, 0);
   background-color: rgb(255, 0, 0);
-  margin:10px 5px;
+  margin:-10px 5px;
 }
 
 
@@ -892,6 +901,35 @@ body{
   border: 1px solid var(--button-bgcolor);
 }
 
+.btn-secondary {
+  padding:8px;
+  background-color: transparent;
+  color: var(--button-bgcolor);
+  font-size: 18px;
+  border: 1px solid var(--button-bgcolor);
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 1px rgba(0,0,0,0.52);
+}
+.btn-secondary:hover{
+  background-color:var(--button-secondary-bgcolor);
+  color: white;
+  border: 1px solid var(--button-bgcolor);
+}
+
+
+.section-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+.section-action .btn,.section-action .btn-secondary{
+  width:100%;
+  margin:0 15px;
+}
+
 .section-title {
   font-size:1.5em;
   font-weight: bold;
@@ -913,35 +951,44 @@ body{
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items:flex-start;
-  padding:0 20px;
+  padding:50px 0 0 0;
   margin: 0;
+  background-color: #3868ac;
   /* background:url('/public/images/desert-transparent.jpg'); */
   background-size:cover;
   background-position:top;
   background-repeat: no-repeat;
 }
 .footer div:nth-child(1){
-  width:96%;
+  width:auto;
 }
 .footer .footer-element{
   color:rgb(20, 20, 20);
   margin:20px;
-  width:100%;
+  width:auto;
+}
+.footer .footer-element p,.footer .footer-element i{
+  color: white;
 }
 .footer .footer-element .title{
   margin: 10px 0;
   font-weight: bold;
   display: block;
+  color: white;
+  text-decoration: underline;
 }
 
 .footer .footer-element .footer-links span{
   margin: 5px 0;
   display: block;
+  color: white;
+  width: 100%;
 }
 .footer .footer-links a {
   display: block;
   text-decoration: none;
-  margin: 10px 5px;
+  margin: 10px 0;
+  color: white;
 }
 
 .footer .under-footer {

@@ -346,6 +346,9 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
+        <div class="section-action">
+            <button class="btn-secondary">View more</button>
+        </div>
     </section>
 
     <section class="itineraries">
@@ -456,6 +459,9 @@
                 </div>
             </div>
 
+            <div class="section-action">
+                <button class="btn-secondary">View more</button>
+            </div>
                 
                 
 
@@ -486,6 +492,9 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+        </div>
+        <div class="section-action">
+            <button class="btn-secondary">View more</button>
         </div>
     </section>
 
@@ -533,58 +542,7 @@
                 </div>
             </div>
             
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Taste of Rajasthan</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
             
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Taste of Rajasthan</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-
             <div class="card">
                 <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');"></div>
                 
@@ -601,6 +559,9 @@
                 
 
         </section>
+        <div class="section-action">
+            <button class="btn-secondary">View more</button>
+        </div>
     </section>    
 
     <section class="popular_cities">
@@ -629,6 +590,9 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+        </div>
+        <div class="section-action">
+            <button class="btn-secondary">View more</button>
         </div>
     </section>
 
@@ -707,6 +671,9 @@
                 
             </div>
         </section>
+        <div class="section-action">
+            <button class="btn">View more</button>
+        </div>
     </section>
 
     <section class="reviews">
@@ -715,7 +682,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="review-container">
-                        <span class="content">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). The trip is memorable from the reception at the time of arrival at Jodhpur Airport to depart from Jodhpur Airport. The selection of hotels was really good at all places keeping in view of mostly the SrCtzns of the group. Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</span>
+                        <span class="content">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</span>
                         <span class="reviewer">Prem Acharya</span>
                     </div>
                 </div>
@@ -793,11 +760,11 @@
             <span class="title">Contact Info</span>
             <div class="footer-links">
                 <span>
-                    <i class="fas fa-phone"></i>
+                    <i style="display: inline;margin-right: 10px;" class="fas fa-phone"></i>
                     <a style="display: inline;" href="tel:+918005656317">+91 8005656317</a>
                 </span>
                 <span>
-                    <i class="fas fa-envelope"></i>
+                    <i style="display: inline;margin-right: 10px;" class="fas fa-envelope"></i>
                     <a href="mailto:info@fortshila.com" style="display: inline;">info@fortshila.com</a>
                 </span>
             </div>
@@ -845,10 +812,16 @@
 
         var swiper = new Swiper(".reviews .slider", {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 20,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },                
             },
            
            
