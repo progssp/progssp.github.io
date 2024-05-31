@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
 /* --logo-color-one:#042654; */
 /* --logo-color-two:#f87509; */
 
 :root {
   scroll-behavior: smooth;
   --background-color: rgb(255, 255, 255);
-  --text-color: rgb(42, 42, 42);
-  --navbar-background-color: rgb(255, 255, 255);
-  --navbar-submenu-background-color: rgb(180, 180, 180);
+  --text-color: white;
+  --card-text-color:#042654;
+  --navbar-background-color:rgba(65, 134, 231,0.8);
+  --navbar-submenu-background-color:rgb(184, 111, 52);
   --navbar-submenu-handle-background-color: var(--navbar-submenu-background-color);
   --navbar-button-bgcolor: #f87509;
   --navbar-button-text-color: white;
@@ -20,6 +25,7 @@
   --button-secondary-text-color: var(--text-color);
 
   --navbar-mobile-background-color: var(--navbar-background-color);
+  --navbar-mobile-text-color: white
 }
 
 /* by default mobile view */
@@ -29,6 +35,7 @@ body{
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  font-family: 'Raleway';
 }
 
 /* custom scrollbar */
@@ -53,20 +60,25 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
+  position:relative;
   padding:5px;
   background-color: rgb(33, 33, 33);
   color: white;
   font-size: 14px;
+  z-index: 10;
 }
 
 .navbar {
+  position:relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding:5px 12px;
+  padding:13px 12px;
+  margin:0;
   background-color:var(--navbar-background-color);
-  box-shadow: 0 0 50px rgba(0,0,0,0.12);
+  box-shadow: 0 0 0px rgba(0,0,0,0.12);
   color: rgb(12,60,96);
+  z-index: 50;
 }
 
 .navbar .logo_div img{
@@ -89,7 +101,7 @@ body{
   font-size: 16px;
   padding:0;
   margin:10px 10px;
-  color: var(--text-color);
+  color:white;
   text-decoration: none;
 }
 .handle-on-submenu-open{
@@ -127,13 +139,13 @@ body{
   width:auto;
   height:auto;
   margin:0;
-  padding:0;
+  padding:0 15px;
 }
 .submenu-slider .swiper-slide {
   font-size:1.5em;
   font-weight: bold;
   color: white;
-  width:auto;
+  width:300px;
   height:300px;
   transition: 0.3s;
   display: flex;
@@ -146,9 +158,39 @@ body{
   background-size: cover;
 }
 .submenu-slider .swiper-slide:hover {
-  transform: scale(1.05,1.05);
+  transform: scale(1.02,1.02);
   cursor: pointer;
   box-shadow:0 0 20px rgba(0,0,0,0.12);
+}
+
+.submenu-slider .swiper-button-next::after {
+  color:rgb(255, 255, 255);
+  background-color: rgb(12,60,96);
+  border-radius: 30px;
+  width:auto;
+  height: auto;
+  padding: 10px;
+  content: "\25BA";
+  font-size: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.12);
+}
+
+.submenu-slider .swiper-button-prev::after {
+  color:rgb(255, 255, 255);
+  background-color: rgb(12,60,96);
+  border-radius: 30px;
+  width:auto;
+  height: auto;
+  padding: 10px;
+  content: "\25BA";
+  font-size: 15px;
+  transform: rotate(180deg);
+  box-shadow: 0 0 20px rgba(0,0,0,0.12);
+}
+
+.submenu-slider .swiper-pagination-bullet {
+  color:white;
+  background-color: white;
 }
 
 .navbar .menu_btn_div {
@@ -161,7 +203,7 @@ body{
   align-self: center;
   background-color:transparent;
   font-size: 25px;
-  color: var(--text-color);
+  color:white;
   border:none;
 }
 
@@ -173,7 +215,7 @@ body{
   color: var(--navbar-button-text-color);
   padding: 10px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.3s ease-in-out;
 }
 .navbar .menu_btn_div .plan_btn:hover{
@@ -182,7 +224,15 @@ body{
   color: var(--button-bgcolor);
   padding: 10px;
   border-radius: 10px;
-  font-size: 18px;
+}
+.navbar .menu_btn_div .google_translate_element,.navbar .menu_btn_div .google_translate_element div{
+  display: flex;
+}
+.navbar .menu_btn_div .goog-te-combo{
+  padding: 10px;
+  align-self: center;
+  margin:0;
+  width:150px;
 }
 
 .navbar_mobile {
@@ -221,9 +271,16 @@ body{
   flex-wrap: wrap;
 }
 
-.navbar_mobile .menu_div div {
+.navbar_mobile .menu_div .menu-list-option {
   margin:0;
-  padding:15px;
+  padding:10px 12px;
+}
+.navbar_mobile .menu_div .menu-list-option::after {
+  content: "";
+  margin-top: 5px;
+  height:1px;
+  display: block;
+  background-color: #d9d9d9;
 }
 
 .navbar_mobile .menu_div a {
@@ -231,7 +288,7 @@ body{
   margin:0;
   display:block;
   text-align: justify;
-  color: var(--text-color);
+  color: var(--navbar-mobile-text-color);
   text-decoration: none;
 }
 
@@ -256,15 +313,17 @@ body{
   display: none;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 .navbar_mobile .submenu-open {
   /* display: flex; */
 }
 
 .navbar_mobile .submenu li {
-  margin: 0;
+  margin:10px 0;
   padding:20px;
+  width:auto;
+  padding: 0;
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
@@ -276,6 +335,9 @@ body{
   width: 100%;
   height: 2px;
   background: var(--navbar-button-bgcolor);
+}
+.navbar_mobile .submenu li a{
+  width:100%;
 }
 .navbar_mobile .submenu li div {
   position:relative;
@@ -296,7 +358,7 @@ body{
 
 .home_slider {
   width:auto;
-  height: 300px;
+  height:100%;
 }
 
 .home_slider .swiper-slide {
@@ -308,6 +370,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position:top;background-repeat: no-repeat;background-size:cover;
 }
 .home_slider .swiper-button-next::after {
   color:rgb(255, 255, 255);
@@ -381,23 +444,33 @@ body{
 }
 
 .places_to_visit_slider .swiper-slide {
-  font-size:1.5em;
-  font-weight: bold;
-  color: white;
   width:auto;
   height:300px;
   transition: 0.3s;
+  padding:0;
+  border-radius:15px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.places_to_visit_slider .swiper-slide .content{
+  border:1px solid white;
+  height:90%;
+  width:90%;
+  font-size:1.4em;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  border-radius:15px;
+  justify-content: center;
   align-items: flex-end;
-  padding:0;
-  border-radius:20px 0 20px 0;
   text-align: center;
 }
 .places_to_visit_slider .swiper-slide:hover {
-  transform: scale(1.05,1.05);
+  transform: scale(1.02,1.02);
   cursor: pointer;
   box-shadow:0 0 20px rgba(0,0,0,0.12);
+  border-radius:0;
 }
 .places_to_visit_slider .swiper-button-next::after {
   color:rgb(255, 255, 255);
@@ -467,11 +540,11 @@ body{
   justify-content: center;
   align-items: flex-end;
   padding:0 0 0 0;
-  border-radius:20px 0 20px 0;
+  border-radius:15px;
   text-align: center;
 }
 .popular_cities_slider .swiper-slide:hover {
-  transform: scale(1.05,1.05);
+  transform: scale(1.02,1.02);
   cursor: pointer;
   box-shadow:0 0 20px rgba(0,0,0,0.12);
 }
@@ -562,14 +635,15 @@ body{
 
 .itineraries_cards .card .card-footer .title{
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  color:var(--text-color);
+  color:var(--card-text-color);
 }
 .itineraries_cards .card .card-footer .location{
   display:block;
-  font-size: 18px;
-  color:var(--text-color);
+  margin-top: 5px;
+  font-size: 17px;
+  color:var(--card-text-color);
 }
 
 .itineraries_cards .card .card-footer .action{
@@ -582,7 +656,7 @@ body{
   display: inline;
   font-size: 18px;
   font-weight: bold;
-  color:var(--text-color);
+  color:var(--card-text-color);
 }
 .itineraries_cards .card .card-footer .action .btn{
   display: inline;
@@ -670,6 +744,7 @@ body{
   background-color: #abffe4;
   padding:25px 0;
   margin: 0;
+  padding:15px;
 }
 .blog .title {
   display: block;
@@ -683,7 +758,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items:flex-start;
+  align-items:center;
   justify-content: space-between;
   background-color: #3589ff;
   margin:0;
@@ -692,7 +767,8 @@ body{
 .usp .content {
   display: flex;
   align-items: center;
-  margin:20px;
+  margin:14px auto;
+  padding:10px;
 }
 .usp .content .icon{
   font-size: 3em;
@@ -717,6 +793,7 @@ body{
 
 .reviews {
   margin:0;
+  background-color: #3589ff;
 }
 
 .reviews .title {
@@ -824,7 +901,6 @@ body{
 
 
 
-
 /* common classes */
 
 .card-container {
@@ -833,7 +909,7 @@ body{
   justify-content:center;
   align-items: stretch;
   margin:0;
-  padding:15px;
+  padding:0;
 }
 .card {
   cursor: pointer;
@@ -869,11 +945,11 @@ body{
 .card .card-footer .title{
   font-size: 24px;
   font-weight: bold;
-  color:var(--text-color);
+  color:var(--card-text-color);
 }
 .card .card-footer .desc{
   font-size: 14px;
-  color:var(--text-color);
+  color:var(--card-text-color);
   text-align: center;
 }
 .card .card-footer .action{
@@ -931,6 +1007,8 @@ body{
 }
 
 .section-title {
+  display: block;
+  width: 100%;
   font-size:1.5em;
   font-weight: bold;
   text-align: center;

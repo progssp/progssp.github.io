@@ -5,35 +5,29 @@
   }
   .home_slider {
     width:auto;
-    height: 400px;
+    height: 500px;
   }
   .home_slider .swiper-slide {
-    font-size:3em;
+    font-size:2.4em;
     font-weight: bold;
   }
 
-  .places_to_visit,.reviews,.blog{
-    margin:100px 0;
-    padding:10px 50px;
+  .places_to_visit,.reviews,.blog,.ig_handle,.itineraries{
+    margin:0;
+    padding:50px;
   }
   .popular_cities{
     margin:100px 0;
     padding: 50px 50px;
   }
 
-  .places_to_visit .title,.reviews .title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left:20px;
+  .places_to_visit_slider .swiper-slide {
+    height:280px;
+  }
+  .places_to_visit_slider .swiper-slide .content{
+    font-size:1.5em;
   }
   
-  .popular_cities .title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 20px;
-  }
   
   
   
@@ -46,16 +40,22 @@
   }
 
   .itineraries_cards .card {
-    width:47%;
-    height: auto;
-    margin:15px 8px;
+    width:48%;
+    height: fit-content;
+    margin:15px auto;
+  }
+
+  .card-container .card {
+    width:48%;
+    height: fit-content;
+    margin: 15px auto;
   }
 
   .query_form {
     box-shadow:0 0 20px rgba(0,0,0,0.5);
     border-radius: 15px;
     position: relative;
-    margin: -50px 20px 0 20px;
+    margin: -50px 50px 0 50px;
     background-position:center;
   }
 
@@ -67,7 +67,7 @@
   }
   
   .query_form form {
-    padding: 10px;
+    padding: 10px 5px;
   }
   
   .query_form form div input[type=date]{
@@ -99,16 +99,12 @@
   .usp {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items:flex-start;
-    justify-content: space-between;
-    background-color: #3589ff;
+    align-items:center;
+    justify-content:space-between;
     border-radius: 15px;
     margin:0 50px;
-    padding: 0;
-}
-
-
+    padding:10px;
+  }
 
 
   
@@ -129,9 +125,10 @@
 
 
   .section-title {
-    font-size:2em;
+    font-size:1.8em;
     font-weight: bold;
     text-align: left;
     margin-left:20px;
+    width: 100%;
   }
 }

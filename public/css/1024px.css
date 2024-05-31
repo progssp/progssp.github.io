@@ -9,7 +9,7 @@
 
   .home_slider {
     width:auto;
-    height: 600px;
+    height: 700px;
   }
 
   
@@ -35,14 +35,16 @@
   }
 
 
+  
+
 
   .itineraries_cards {
-    padding: 0 50px;
+    padding: 0;
   }
   .itineraries_cards .card {
     width:48%;
     height: auto;
-    margin:15px 5px;
+    margin:15px 8px;
   }
   
   .query_form {
@@ -67,9 +69,10 @@
 
 
   .card-container .card {
-    width:45%;
-    margin: 15px 10px;
+    width:48%;
+    margin: 15px auto;
   }
+
 
   .footer .under-footer {
     height:150px;
@@ -99,14 +102,6 @@
 
 
 
-
-
-  .section-title {
-    font-size:2em;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 50px;
-  }
 
 
   

@@ -1,26 +1,29 @@
 @media screen and (min-width:1200px){
   
   .navbar .menu_div a{
-    align-self: center;
     font-size: 16px;
     padding:0;
     margin:10px 18px;
-    color: var(--text-color);
-    text-decoration: none;
+  }  
+  
+  .itineraries_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:stretch;
+    margin:0;
+    padding:0;
+  }
+
+  .itineraries_cards .card {
+    width:23%;
+    height: auto;
+    margin:15px 10px;
   }
   
-    .itineraries_cards {
-      padding: 0;
-      justify-content:center;
-    }
-    .itineraries_cards .card {
-      width:330px;
-      height: auto;
-      margin:15px 10px;
-    }
-    .card-container .card {
-      width:420px;
-      height: auto;
-      margin:15px 10px;
-    }
+  .card-container .card {
+    width:31%;
+    height: auto;
+    margin:15px 10px;
   }
+}
