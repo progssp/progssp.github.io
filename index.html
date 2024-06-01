@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="public/css/app.css">
     <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/640px.css">
@@ -38,10 +39,9 @@
 
         <div class="menu_div">
             <div><a href="#">Home</a></div>
-            <div><a href="#">About</a></div>
             <div>
-                <a href="#" id="itineraries_menu_handle" onclick="open_sub_menu(this)">Itineraries <i class="fas fa-angle-down" style="margin: 0;padding: 0;"></i></a>
-                <div style="position: absolute;left:0;width:100%;">
+                <a href="javascript:void(0)" id="itineraries_menu_handle" onclick="open_sub_menu(this)">Itineraries <i class="fas fa-angle-down" style="margin: 0;padding: 0;"></i></a>
+                <div style="position: absolute;left:0;width:100%;top:60px;padding:0;margin:0;">
                     <ul class="submenu" id="itineraries_menu">
                         <li>
                             <div class="swiper submenu-slider">
@@ -68,8 +68,8 @@
                 </div>              
             </div>
             <div>
-                <a href="#" id="iti2_menu_handle" onclick="open_sub_menu(this)">Places <i class="fas fa-angle-down"></i></a>
-                <div style="position: absolute;left:0;width:100%;">
+                <a href="javascript:void(0)" id="iti2_menu_handle" onclick="open_sub_menu(this)">Places <i class="fas fa-angle-down"></i></a>
+                <div style="position: absolute;left:0;width:100%;top:60px;padding:0;margin:0;">
                     <ul class="submenu" id="iti2_menu">
                         <li>
                             <div class="swiper submenu-slider">
@@ -108,8 +108,8 @@
                 </div>
             </div>
             <div>
-                <a href="#" id="iti3_menu_handle" onclick="open_sub_menu(this)">Activities <i class="fas fa-angle-down"></i></a>
-                <div style="position: absolute;left:0;width:100%;">
+                <a href="javascript:void(0)" id="iti3_menu_handle" onclick="open_sub_menu(this)">Activities <i class="fas fa-angle-down"></i></a>
+                <div style="position: absolute;left:0;width:100%;top:60px;padding:0;margin:0;">
                     <ul class="submenu" id="iti3_menu">
                         <li>
                             <div class="swiper submenu-slider">
@@ -142,9 +142,9 @@
         </div>
         <div class="menu_btn_div">
             <button class="plan_btn">Book now</button>
+            <button class="plan_btn" style="color:black;" onclick="updateModalVisibility('lang_modal');"><i class="fas fa-language"></i></button>
             <!-- <button class="plan_btn" onclick="doGTranslate('en|fr');return false;">French</button>
             <button class="plan_btn" onclick="doGTranslate('en|de');return false;">German</button> -->
-            <div id="google_translate_element" class="google_translate_element"></div>
         </div>
     </div>
 
@@ -153,11 +153,7 @@
         <div class="menu_div">
             <div onclick="close_mobile_menu()" class="close_btn"><i class="fas fa-close"></i></div>
             <div class="menu-list-option"><a href="#" translate="yes">Home</a></div>
-            <div class="menu-list-option">
-                <div style="display: flex;justify-content: space-between;">
-                    <div><a href="#">About</a></div>
-                </div>
-            </div>
+            
             <div class="menu-list-option">
                 <div style="display: flex;justify-content: space-between;cursor: pointer;" id="iti_mobile_menu_handle" onclick="open_sub_menu(this)">
                     <div><a href="javascript:void(0)">Itineraries</a></div>
@@ -202,7 +198,7 @@
             <div class="menu-list-option">
                 
                 <div style="display: flex;justify-content: space-between;cursor: pointer;" id="places_mobile_menu_handle" onclick="open_sub_menu(this)">
-                    <div><a href="#">Places</a></div>
+                    <div><a href="javascript:void(0)">Places</a></div>
                     <div><i class="fas fa-angle-down" style="margin: 0;padding: 0;color: var(--navbar-mobile-text-color);"></i></div>
                 </div>
                 
@@ -240,7 +236,7 @@
             </div>
             <div class="menu-list-option">
                 <div style="display: flex;justify-content: space-between;cursor: pointer;" id="activities_mobile_menu_handle" onclick="open_sub_menu(this)">
-                    <div><a href="#">Activities</a></div>
+                    <div><a href="javascript:void(0)">Activities</a></div>
                     <div><i class="fas fa-angle-down" style="margin: 0;padding: 0;color: var(--navbar-mobile-text-color);"></i></div>
                 </div>
                 
@@ -317,19 +313,7 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-
-    <!--
-        <section class="about">
-            <p class="title">About FortShila</p>
-            <p class="content">
-                “Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
-                </p>
-            <p class="title">Why FortShila</p>
-            <p class="content">
-                We at FortShila are experienced travelers who collaborated our Travel ideas to provide best travelling experience to our voyager. We are focused in our work will provide you best Tours and Travel services. With individual experience in this field we have earned competitive advantage and plenty appreciation from the travel industry. You can try and prove us wrong! Hopefully we will satisfy your needs and requirements.
-            </p>
-        </section> 
-    -->
+    
 
     <section class="query_form">
         <form action="" method="get">
@@ -367,51 +351,16 @@
         </form>
     </section>
 
-    
-
-    <section class="places_to_visit">
-        <p class="section-title">Places to visit</p>
-        <div class="swiper places_to_visit_slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Desert</span>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Mountains</span>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Temples</span>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Forest</span>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Wildlife sanctuaries</span>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
-                    <div class="content">
-                        <span>Beaches</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="section-action">
-            <button class="btn-secondary">View more</button>
-        </div>
-    </section>
+    <section class="about">
+        <p class="title">About FortShila</p>
+        <p class="content">
+            “Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+            </p>
+        <p class="title">Why FortShila</p>
+        <p class="content">
+            We at FortShila are experienced travelers who collaborated our Travel ideas to provide best travelling experience to our voyager. We are focused in our work will provide you best Tours and Travel services. With individual experience in this field we have earned competitive advantage and plenty appreciation from the travel industry. You can try and prove us wrong! Hopefully we will satisfy your needs and requirements.
+        </p>
+    </section> 
 
     <section class="itineraries">
         <p class="section-title">Check out the tours we provide</p>
@@ -530,6 +479,54 @@
 
         </section>
     </section>
+
+    
+
+    <section class="places_to_visit">
+        <p class="section-title">Places to visit</p>
+        <div class="swiper places_to_visit_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Desert</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Mountains</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Temples</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Forest</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Wildlife sanctuaries</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                    <div class="content">
+                        <span>Beaches</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="section-action">
+            <button class="btn-secondary">View more</button>
+        </div>
+    </section>
+
+    
     
 
     <section class="places_to_visit">
@@ -858,11 +855,27 @@
     
     <div class="backdrop"></div>
 
+    <div class="modal" id="lang_modal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">Select Language</span>
+                    <button class="modal-close-btn" onclick="updateModalVisibility('lang_modal')"><i class="fas fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div id="google_translate_element" class="google_translate_element"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="public/js/app.js"></script>
 
     <!-- Swiper JS -->

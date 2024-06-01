@@ -11,7 +11,7 @@
   --text-color: white;
   --card-text-color:#042654;
   --navbar-background-color:rgba(65, 134, 231,0.8);
-  --navbar-submenu-background-color:rgb(184, 111, 52);
+  --navbar-submenu-background-color:rgba(184, 111, 52,0.98);
   --navbar-submenu-handle-background-color: var(--navbar-submenu-background-color);
   --navbar-button-bgcolor: #f87509;
   --navbar-button-text-color: white;
@@ -21,7 +21,7 @@
   --button-bgcolor-hover: #042654;
   --button-text-color-hover:white;
   
-  --button-secondary-bgcolor: rgb(248, 117, 9);
+  --button-secondary-bgcolor: #042654;
   --button-secondary-text-color: var(--text-color);
 
   --navbar-mobile-background-color: var(--navbar-background-color);
@@ -64,7 +64,7 @@ body{
   padding:5px;
   background-color: rgb(33, 33, 33);
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   z-index: 10;
 }
 
@@ -93,7 +93,7 @@ body{
 
 .navbar .menu_div div{
   align-self: center;
-  padding:15px 0;
+  padding:12px 0;
 }
 
 .navbar .menu_div a{
@@ -215,7 +215,8 @@ body{
   color: var(--navbar-button-text-color);
   padding: 10px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 14px;
+  margin: 0 2px;
   transition: 0.3s ease-in-out;
 }
 .navbar .menu_btn_div .plan_btn:hover{
@@ -224,15 +225,6 @@ body{
   color: var(--button-bgcolor);
   padding: 10px;
   border-radius: 10px;
-}
-.navbar .menu_btn_div .google_translate_element,.navbar .menu_btn_div .google_translate_element div{
-  display: flex;
-}
-.navbar .menu_btn_div .goog-te-combo{
-  padding: 10px;
-  align-self: center;
-  margin:0;
-  width:150px;
 }
 
 .navbar_mobile {
@@ -272,7 +264,7 @@ body{
 }
 
 .navbar_mobile .menu_div .menu-list-option {
-  margin:0;
+  margin:5px 0;
   padding:10px 12px;
 }
 .navbar_mobile .menu_div .menu-list-option::after {
@@ -306,6 +298,7 @@ body{
   font-size: 25px;
   margin-top: 35px;
   margin-left: 20px;
+  margin-bottom: 40px;
   color: white;
 }
 
@@ -362,15 +355,21 @@ body{
 }
 
 .home_slider .swiper-slide {
-  font-size:20px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
   padding:0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position:top;background-repeat: no-repeat;background-size:cover;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.home_slider .swiper-slide span {
+  font-size:22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width:auto;
+  margin: 0 50px;
 }
 .home_slider .swiper-button-next::after {
   color:rgb(255, 255, 255);
@@ -440,7 +439,7 @@ body{
 .places_to_visit_slider {
   width:auto;
   height:auto;
-  padding:20px 15px;
+  padding:20px 10px;
 }
 
 .places_to_visit_slider .swiper-slide {
@@ -526,7 +525,7 @@ body{
 .popular_cities_slider {
   width:auto;
   height:auto;
-  padding:20px 15px;
+  padding:20px 10px;
 }
 
 .popular_cities_slider .swiper-slide {
@@ -698,31 +697,31 @@ body{
 }
 .query_form form div label{
   display: block;
-  font-size: 20px;
+  font-size: 14px;
   color: white;
 }
 .query_form form div input[type=date]{
   padding:10px 5px;
-  font-size: 16px;
+  font-size: 14px;
   width:100%;
   border: none;
 }
 .query_form form div select{
   padding:10px 5px;
-  font-size: 16px;
+  font-size: 14px;
   width:101.5%;
   border: none;
 }
 .query_form form div input[type=number]{
   padding:10px 5px;
-  font-size: 16px;
+  font-size: 14px;
   width:100%;
   border: none;
 }
 .query_form form div button[type=submit]{
   cursor: pointer;
   padding:9px 14px;
-  margin:30px 0 0 0;
+  margin:15px 0 0 0;
   font-size:20px;
   border-radius: 5px;
   background-color: var(--navbar-button-bgcolor);
@@ -778,13 +777,13 @@ body{
   display:block;
   color: white;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 18px;
   margin-left: 20px;
 }
 .usp .content .sub-title{
   display:block;
   color: white;
-  font-size: 1em;
+  font-size:15px;
   margin-left: 20px;
 }
 
@@ -901,7 +900,106 @@ body{
 
 
 
+
+
+
+
+
+
+
+/* city page design */
+.page_content_container {
+  position: relative;
+  padding:20px;
+  z-index:2;
+  background-color: rgb(208, 208, 208);
+  margin:-50px 10px 0 10px;
+}
+
+.tabs_content_active {
+  display: block;
+}
+
+.tabs_title_active {
+  background-color: rgb(162, 162, 162);
+}
+.tabs_container{
+  border: 1px solid transparent;
+}
+.tabs_container .tabs_title_container {
+  display: flex;
+}
+.tabs_container .tabs_title_container .tabs_title {
+  padding: 5px;
+  border: 1px solid var(--button-bgcolor);
+  background-color: rgb(161, 161, 161);
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+}
+.tabs_container .tabs_content_container .tabs_content {
+  display: none;
+}
+/* city page design end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* common classes */
+
+.google_translate_element div{
+  display: flex;
+}
+.goog-te-combo{
+  padding: 10px;
+  align-self: center;
+  margin:0;
+  width:auto;
+  border-radius: 10px;
+}
 
 .card-container {
   display: flex;
@@ -961,10 +1059,10 @@ body{
 
 
 .btn {
-  padding:8px;
+  padding:6px;
   background-color: var(--button-bgcolor);
   color: var(--button-text-color);
-  font-size: 18px;
+  font-size: 17px;
   border: 1px solid var(--button-bgcolor);
   transition: 0.3s ease-in-out;
   border-radius: 10px;
@@ -1013,6 +1111,50 @@ body{
   font-weight: bold;
   text-align: center;
 }
+
+.modal {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 50;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  padding:0;
+}
+.modal-open{
+  display:flex;
+}
+.modal .modal-container {
+  width:100%;padding:0 5px;
+}
+.modal .modal-container .modal-content {
+  padding:14px;background-color: bisque;
+  border-radius: 10px;
+  overflow-y: scroll;
+  min-height:auto;
+  max-height: 90vh;
+}
+.modal .modal-container .modal-content .modal-header{
+  display: flex;justify-content: space-between;
+}
+.modal .modal-container .modal-content .modal-header .modal-close-btn{
+  background-color: var(--button-bgcolor);
+  color: var(--button-text-color);
+  border-radius: 50px;
+  padding: 5px;
+  border: 1px solid var(--button-bgcolor);
+  cursor: pointer;
+  font-size: 20px;
+}
+.modal .modal-container .modal-content .modal-body {}
+
+
+
+/* common classes end */
 
 
 

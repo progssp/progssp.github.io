@@ -7,10 +7,7 @@
     width:auto;
     height: 500px;
   }
-  .home_slider .swiper-slide {
-    font-size:2.4em;
-    font-weight: bold;
-  }
+  
 
   .places_to_visit,.reviews,.blog,.ig_handle,.itineraries{
     margin:0;
@@ -102,7 +99,7 @@
     align-items:center;
     justify-content:space-between;
     border-radius: 15px;
-    margin:0 50px;
+    margin:0 50px 100px 50px;
     padding:10px;
   }
 
@@ -130,5 +127,9 @@
     text-align: left;
     margin-left:20px;
     width: 100%;
+  }
+
+  .modal .modal-container {
+    padding:0 30%;
   }
 }

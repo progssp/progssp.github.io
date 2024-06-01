@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/fonts.css">
+    <link rel="stylesheet" href="public/css/640px.css">
+    <link rel="stylesheet" href="public/css/768px.css">
+    <link rel="stylesheet" href="public/css/1024px.css">
+    <link rel="stylesheet" href="public/css/1200px.css">
+    <title>City sample page - FS</title>
+</head>
+<body onload="updateTab('welcome')">
+    <!-- <div class="city-header-video" style="display: flex;justify-content: center;align-items: center;width:100%;height:600px;position: relative;">
+        <div style="position: absolute;top:0;left:0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.6);"></div>-->
+        <!-- <video src="https://www.youtube.com/watch?v=x28eIK0l1T8"></video> -->
+        <!--<iframe style="width:100%;height:100%;" type="text/html" allow="autoplay" src="https://www.youtube.com/embed/x28eIK0l1T8?rel=0&modestbranding=0&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"></iframe>
+    </div> -->
+    <div class="topbar">
+        <span>Welcome to Fortshila</span>
+        <div>
+            <span style="margin:0 10px;"><i style="margin:0 5px;" class="fas fa-phone"></i>+91 8005656317</span>
+            <span style="margin:0 10px;"><i style="margin:0 5px;" class="fas fa-phone"></i>+91 8005656317</span>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div style="display: flex;">
+            <button class="menu_btn" onclick="show_mobile_menu()"><i class="fas fa-bars"></i></button>
+            
+            <div class="logo_div">
+                <img src="public/images/logo.png" alt="" />
+            </div>
+        </div>
+
+        <div class="menu_div">
+            <div><a href="#">Home</a></div>
+            <div>
+                <a href="javascript:void(0)" id="itineraries_menu_handle" onclick="open_sub_menu(this)">Itineraries <i class="fas fa-angle-down" style="margin: 0;padding: 0;"></i></a>
+                <div style="position: absolute;left:0;width:100%;">
+                    <ul class="submenu" id="itineraries_menu">
+                        <li>
+                            <div class="swiper submenu-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');">
+                                        <span>Golden Triangle</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');">
+                                        <span>Fort and palaces of India</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');">
+                                        <span>Tastes of Rajasthan</span>
+                                    </div>                        
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');">
+                                        <span>Plan trip</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>              
+            </div>
+            <div>
+                <a href="javascript:void(0)" id="iti2_menu_handle" onclick="open_sub_menu(this)">Places <i class="fas fa-angle-down"></i></a>
+                <div style="position: absolute;left:0;width:100%;">
+                    <ul class="submenu" id="iti2_menu">
+                        <li>
+                            <div class="swiper submenu-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Desert</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Mountains</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Forest</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Beaches</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Desert</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Mountains</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Forest</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Beaches</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)" id="iti3_menu_handle" onclick="open_sub_menu(this)">Activities <i class="fas fa-angle-down"></i></a>
+                <div style="position: absolute;left:0;width:100%;">
+                    <ul class="submenu" id="iti3_menu">
+                        <li>
+                            <div class="swiper submenu-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/cricket.jpg');background-position: center;background-repeat: no-repeat;background-size:cover">
+                                        <span>Play cricket</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/diving.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Under water diving</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/kite_flying.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Kite Flying</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/skiing.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Ice Skiing</span>
+                                    </div>
+                                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/activities_slider/yoga.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                                        <span>Yoga</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div><a href="#">Blog</a></div>
+            <div><a href="#">Gallery</a></div>
+            <div><a href="#">Contact</a></div>
+        </div>
+        <div class="menu_btn_div">
+            <button class="plan_btn">Book now</button>
+            <button class="plan_btn" style="color:black;" onclick="updateModalVisibility('lang_modal');"><i class="fas fa-language"></i></button>
+            <!-- <button class="plan_btn" onclick="doGTranslate('en|fr');return false;">French</button>
+            <button class="plan_btn" onclick="doGTranslate('en|de');return false;">German</button> -->
+        </div>
+    </div>
+
+    
+    <div class="navbar_mobile">
+        <div class="menu_div">
+            <div onclick="close_mobile_menu()" class="close_btn"><i class="fas fa-close"></i></div>
+            <div class="menu-list-option"><a href="#" translate="yes">Home</a></div>
+            
+            <div class="menu-list-option">
+                <div style="display: flex;justify-content: space-between;cursor: pointer;" id="iti_mobile_menu_handle" onclick="open_sub_menu(this)">
+                    <div><a href="javascript:void(0)">Itineraries</a></div>
+                    <div><i class="fas fa-angle-down" style="margin: 0;padding: 0;color: var(--navbar-mobile-text-color);"></i></div>
+                </div>
+                
+                <ul class="submenu" id="iti_mobile_menu">
+                    
+                    <li>
+                        <a href="#22">
+                            <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/golden_triangle.jpg');">
+                                <span>Golden Triangle</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>                        
+                        <a href="#22">
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/forts-and-palaces.jpg');">
+                            <span>Fort and palaces of India</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#22">                        
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');">
+                            <span>Tastes of Rajasthan</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#22">                      
+                        <div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/itineraries/plan-your-trip.jpg');">
+                            <span>Plan trip</span>
+                        </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+                            
+            </div>
+            <div class="menu-list-option">
+                
+                <div style="display: flex;justify-content: space-between;cursor: pointer;" id="places_mobile_menu_handle" onclick="open_sub_menu(this)">
+                    <div><a href="javascript:void(0)">Places</a></div>
+                    <div><i class="fas fa-angle-down" style="margin: 0;padding: 0;color: var(--navbar-mobile-text-color);"></i></div>
+                </div>
+                
+                <ul class="submenu" id="places_mobile_menu">
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                            <span>Desert</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/mountain.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                            <span>Mountains</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/forest.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                            <span>Forest</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/places_to_visit_slider/beach.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                            <span>Beaches</span>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+                            
+            </div>
+            <div class="menu-list-option">
+                <div style="display: flex;justify-content: space-between;cursor: pointer;" id="activities_mobile_menu_handle" onclick="open_sub_menu(this)">
+                    <div><a href="javascript:void(0)">Activities</a></div>
+                    <div><i class="fas fa-angle-down" style="margin: 0;padding: 0;color: var(--navbar-mobile-text-color);"></i></div>
+                </div>
+                
+                <ul class="submenu" id="activities_mobile_menu">
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/cricket.jpg');">
+                            <span>Play cricket</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/diving.jpg');">
+                            <span>Under water diving</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/kite_flying.jpg');">
+                            <span>Kite Flying</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/skiing.jpg');">
+                            <span>Ice Skiing</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#33">
+                        <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('public/images/activities_slider/yoga.jpg');">
+                            <span>Yoga</span>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+                            
+            </div>
+            <div class="menu-list-option"><a href="#">Blog</a></div>
+            <div class="menu-list-option"><a href="#">Group Tours</a></div>
+            <div class="menu-list-option"><a href="#">Gallery</a></div>
+            <div class="menu-list-option"><a href="#">Contact</a></div>
+
+            
+        </div>
+        <div class="menu_btn_div">
+        </div>
+    </div>  
+
+    <div style="z-index:0;" class="swiper home_slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider1.jpg');">
+                <span data-swiper-parallax="-300">Explore Traditions, culture</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider2.jpg');">
+                <span data-swiper-parallax="-300">Explore Historical Sites</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider3.jpg');">
+                <span data-swiper-parallax="-300">Explore echoing mountains</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider4.jpg');">
+                <span data-swiper-parallax="-300">Explore peaceful woods</span>
+            </div>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider5.jpg');">
+                <span data-swiper-parallax="-300">Explore Flora and fauna</span>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="page_content_container">
+
+
+        <div id="details_tab" class="tabs_container">
+            <div class="tabs_title_container">
+                <div id="welcome_title" onclick="updateTab('welcome')" class="tabs_title">
+                    <span>Welcome</span>
+                </div>
+                <div id="geo_title" onclick="updateTab('geo')" class="tabs_title">
+                    <span>Geo</span>
+                </div>
+            </div>
+            
+            <div class="tabs_content_container">
+                <div class="tabs_content" id="welcome_tab">
+                    <span>
+                        Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                    </span>
+                </div>  
+                <div class="tabs_content" id="geo_tab">
+                    <span>
+                        geo and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                    </span>
+                </div>                
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+
+
+    
+    <div class="backdrop"></div>
+
+
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="public/js/app.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home_slider", {
+            autoplay: {
+               delay: 5000,
+               disableOnInteraction: false,
+            },
+            effect: "fade",
+            parallax: true,
+            speed: 600,
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
