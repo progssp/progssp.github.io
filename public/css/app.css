@@ -1083,7 +1083,7 @@ body{
   padding:20px;
   z-index:2;
   background-color: rgb(243, 243, 243);
-  margin:-50px 20px 0 20px;
+  margin:-50px 5px 0 5px;
   border-radius: 20px;
 }
 
@@ -1095,6 +1095,7 @@ body{
 }
 .tabs_container .tabs_title_container {
   display: flex;
+  flex-wrap: wrap;
 }
 .tabs_container .tabs_title_container .tabs_title {
   padding:10px;
@@ -1116,6 +1117,7 @@ body{
 }
 .tabs_container .tabs_content_container {
   margin-top: 15px;
+  width: 100%;
 }
 .tabs_container .tabs_content_container .tabs_content {
   display: none;
