@@ -20,8 +20,23 @@
     height: auto;
     margin:15px 10px;
   }
+
+  .itinerary_categories_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:stretch;
+    margin:0;
+    padding:0;
+  }
+
+  .itinerary_categories_cards .card {
+    width:23%;
+    height: auto;
+    margin:15px 10px;
+  }
   
-  .card-container .card {
+  .blog .card-container .card {
     width:31%;
     height: auto;
     margin:15px 10px;

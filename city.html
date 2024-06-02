@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="public/css/1200px.css">
     <title>City sample page - FS</title>
 </head>
-<body onload="updateTab('welcome')">
+<body">
     <!-- <div class="city-header-video" style="display: flex;justify-content: center;align-items: center;width:100%;height:600px;position: relative;">
         <div style="position: absolute;top:0;left:0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.6);"></div>-->
         <!-- <video src="https://www.youtube.com/watch?v=x28eIK0l1T8"></video> -->
@@ -38,7 +38,7 @@
             <button class="menu_btn" onclick="show_mobile_menu()"><i class="fas fa-bars"></i></button>
             
             <div class="logo_div">
-                <img src="public/images/logo.png" alt="" />
+                <a href="/"><img src="public/images/logo.png" alt="" /></a>
             </div>
         </div>
 
@@ -297,21 +297,24 @@
 
     <div style="z-index:0;" class="swiper home_slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider1.jpg');">
-                <span data-swiper-parallax="-300">Explore Traditions, culture</span>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/city/jaipur/slider1.jpg');">
+                <span data-swiper-parallax="-300"></span>
             </div>
-            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider2.jpg');">
-                <span data-swiper-parallax="-300">Explore Historical Sites</span>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/city/jaipur/slider2.jpg');background-position: bottom;">
+                <span data-swiper-parallax="-300"></span>
             </div>
-            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider3.jpg');">
-                <span data-swiper-parallax="-300">Explore echoing mountains</span>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/city/jaipur/slider3.jpg');">
+                <span data-swiper-parallax="-300"></span>
             </div>
-            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider4.jpg');">
-                <span data-swiper-parallax="-300">Explore peaceful woods</span>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/city/jaipur/slider4.jpg');">
+                <span data-swiper-parallax="-300"></span>
             </div>
-            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/home_slider/slider5.jpg');">
-                <span data-swiper-parallax="-300">Explore Flora and fauna</span>
+            <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/city/jaipur/slider6.jpg');">
+                <span data-swiper-parallax="-300"></span>
             </div>
+        </div>
+        <div style="position: relative;z-index: 2;background-color: antiquewhite;">
+            <span style="width:100%;position:absolute;bottom:100px;text-align: center;font-size: 3.5em;color:white;">Guide to Jaipur</span>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -320,31 +323,224 @@
 
     <div class="page_content_container">
 
+        <div style="display:flex;flex-wrap: wrap;flex-direction:row;justify-content: space-between;align-items:flex-start;">
 
-        <div id="details_tab" class="tabs_container">
-            <div class="tabs_title_container">
-                <div id="welcome_title" onclick="updateTab('welcome')" class="tabs_title">
-                    <span>Welcome</span>
+
+            <div id="details_tab" class="tabs_container">
+                <div class="tabs_title_container">
+                    <div id="welcome_title" onclick="updateTab('welcome')" class="tabs_title title_active">
+                        <span>Welcome</span>
+                    </div>
+                    <div id="getting_title" onclick="updateTab('getting')" class="tabs_title">
+                        <span>Getting to Jaipur</span>
+                    </div>
+                    <div id="when_to_visit_title" onclick="updateTab('when_to_visit')" class="tabs_title">
+                        <span>When to visit</span>
+                    </div>
+                    <div id="accessibility_title" onclick="updateTab('accessibility')" class="tabs_title">
+                        <span>Accessibility</span>
+                    </div>
                 </div>
-                <div id="geo_title" onclick="updateTab('geo')" class="tabs_title">
-                    <span>Geo</span>
+                
+                <div class="tabs_content_container">
+                    <div class="tabs_content content_active" id="welcome_tab">
+                        <span>
+                            Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                        </span>
+                    </div>  
+                    <div class="tabs_content" id="getting_tab">
+                        <span>
+                            geo and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                        </span>
+                    </div>
+                      
+                    <div class="tabs_content" id="when_to_visit_tab">
+                        <span>
+                            geo and we will design the best package for you. Through our exceptionally curated occasion bundles, we Forts and Palaces.
+                        </span>
+                    </div>
+                      
+                    <div class="tabs_content" id="accessibility_tab">
+                        <span>
+                            the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
+                        </span>
+                    </div>             
                 </div>
+                
             </div>
-            
-            <div class="tabs_content_container">
-                <div class="tabs_content" id="welcome_tab">
-                    <span>
-                        Travel is the main thing you purchase that makes you more extravagant”. We, at ‘FortShila’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. FortShila provides complete tour and travel packages of India by offering Tours like Golden Triangle (Delhi, Jaipur and Agra), Panch Ratna of Rajasthan, The Land of Tigers, The Mighty Himalayas etc. We are a Travel Agency based out of India with deep analysis we understand the new Travel needs of customer. We have designed Tour packages which will fulfill the Travel desires of our clints. In this busy world people have less time to explore more. To satisfy our voyager we also customize your Tours as per your availability and your interests. You can provide us travel dates and headcounts, and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
-                    </span>
-                </div>  
-                <div class="tabs_content" id="geo_tab">
-                    <span>
-                        geo and we will design the best package for you. Through our exceptionally curated occasion bundles, we will take you on an adventure where you will personally enjoy the stunning Architecture of Indian Forts and Palaces.
-                    </span>
-                </div>                
+
+            <div class="map_container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227749.05320411964!2d75.62574890281593!3d26.88511514799274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1717235218661!5m2!1sen!2sin" style="border:0;width:100%;height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
+
         </div>
+
+
+        <section class="itineraries" style="padding:50px 0;">
+            <p class="section-title">Tours related to this city</p>
+            <section class="itineraries_cards">
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Golden Triangle</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Forts & palaces</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Taste of Rajasthan</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Forts & palaces</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Forts & palaces</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Taste of Rajasthan</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title">Forts & palaces</span>
+                        <span class="location">Delhi - Agra - Jaipur</span>
+                        <div class="action">
+                            <span class="cost">USD 1000</span>
+                            <button class="btn">Check now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                
+    
+                <div class="card">
+                    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');"></div>
+                    
+                    <div class="card-footer">
+                        <span class="title" style="text-align: center;">Plan your trip</span>
+                        <span class="location" style="text-align: center;">Plan/customize your trip</span>
+                        <div class="action" style="justify-content: center;">
+                            <button class="btn">Plan now</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="section-action">
+                    <button class="btn-secondary">View more</button>
+                </div>
+                    
+                    
+    
+            </section>
+        </section>
+
+        <section class="popular_cities" style="padding:50px 0;">
+            <p class="section-title" style="color: white;">Other Cities</p>
+            <div class="swiper popular_cities_slider">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/places_to_visit_slider/desert.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Jodhpur</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/jaipur.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Jaipur</span>
+                                </div></a>
+                    </div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/jaisalmer.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Jaisalmer</span></div></a>
+                    </div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/udaipur.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Udaipur</span></div></a>
+                    </div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/ranthambor.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Sujangarh</span></div></a>
+                    </div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/popular_cities/bikaner.jpg');background-position: center;background-repeat: no-repeat;background-size:cover;">
+                        <a href="/city.html">
+                            <div class="text_container">
+                                <span>Bikaner</span></div></a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="section-action">
+                <button class="btn-secondary">View more</button>
+            </div>
+        </section>
 
 
 
@@ -354,15 +550,76 @@
 
     
     <div class="backdrop"></div>
+    <section class="footer">
+        <div class="footer-element">
+            <img src="public/images/logo.png" style="width: 200px;"/>
+            <p>
+                There are many variations of passages of Lorem the Ipsum available but it is the majority of suffered that a alteration in that some dummy text.
+            </p>
+            <div>
+                <span style="margin: 0 5px;"><a href="#"><i class="fa-brands fa-facebook"></i></a></span>
+                <span style="margin: 0 5px;"><a href="#"><i class="fa-brands fa-twitter"></i></a></span>
+                <span style="margin: 0 5px;"><a href="#"><i class="fa-brands fa-youtube"></i></a></span>
+                <span style="margin: 0 5px;"><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+            </div>
+        </div>
+        <div class="footer-element">
+            <span class="title">Support</span>
+            <div class="footer-links">
+                <a href="#">Customer support</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Contact channels</a>
+            </div>
+        </div>
+        <div class="footer-element">
+            <span class="title">More links</span>
+            <div class="footer-links">
+                <a href="#">Blog</a>
+                <a href="#">Itineraries</a>
+                <a href="#">Group Tours</a>
+                <a href="#">Gallery</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+        <div class="footer-element">
+            <span class="title">Contact Info</span>
+            <div class="footer-links">
+                <span style="margin:15px 0;">
+                    <i style="display: inline;margin-right: 10px;" class="fas fa-phone"></i>
+                    <a style="display: inline;" href="tel:+918005656317">+91 8005656317</a>
+                </span>
+                <span>
+                    <i style="display: inline;margin-right: 10px;" class="fas fa-envelope"></i>
+                    <a href="mailto:info@fortshila.com" style="display: inline;">info@fortshila.com</a>
+                </span>
+            </div>
+        </div>
 
+        <div class="under-footer">
+            <span>&copy; Copyright 2024.</span>
+        </div>
+    </section>
 
-
-
-
-
+    <div class="modal" id="lang_modal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">Select Language</span>
+                    <button class="modal-close-btn" onclick="updateModalVisibility('lang_modal')"><i class="fas fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div id="google_translate_element" class="google_translate_element"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
     
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="public/js/app.js"></script>
 
     <!-- Swiper JS -->
@@ -370,10 +627,10 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".home_slider", {
-            autoplay: {
-               delay: 5000,
-               disableOnInteraction: false,
-            },
+            //autoplay: {
+            //    delay: 5000,
+            //    disableOnInteraction: false,
+            //},
             effect: "fade",
             parallax: true,
             speed: 600,
@@ -387,6 +644,150 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+        var swiper = new Swiper(".reviews .slider", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },                
+            },
+           
+           
+            
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var swiper = new Swiper(".places_to_visit_slider", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: true,
+            // },
+            freemode: true,
+            parallax: true,
+            speed: 600,
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                400: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+        var swiper = new Swiper(".popular_cities_slider", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: true,
+            // },
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                400: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+        var swiper = new Swiper(".submenu-slider", {
+            slidesPerView: 2,
+            spaceBetween: 15,
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+            }
+        });
+
+
+        var swiper = new Swiper(".activities_slider", {
+            slidesPerView: 1,
+            spaceBetween: 15,
+           
+            lazy: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 18,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+            }
         });
     </script>
 </body>

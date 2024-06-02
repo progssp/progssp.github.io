@@ -31,13 +31,13 @@ function open_sub_menu(evt){
     menu_to_open = menu_to_open.substr(0,menu_to_open.indexOf("_handle"));
     if(document.querySelector("#"+menu_to_open).classList.contains("submenu-open")){   
         document.querySelector("#"+menu_to_open).classList.remove("submenu-open");
-        $("#"+menu_to_open).slideUp(200);
+        $("#"+menu_to_open).slideUp(150);
         $(".submenu").removeClass("submenu-open");
         setTimeout(()=>{
             document.querySelector("#"+handle).parentElement.classList.remove("handle-on-submenu-open");
             document.querySelector("#"+handle+" i").classList.add("fa-angle-down");
             document.querySelector("#"+handle+" i").classList.remove("fa-angle-up");
-        },220);
+        },150);
         // document.getElementsByTagName("body")[0].style.overflow = "";
     }
     else{
@@ -46,7 +46,7 @@ function open_sub_menu(evt){
         $(".navbar .menu_div div").removeClass("handle-on-submenu-open");
         $(".navbar_mobile .menu_div .menu-list-option").removeClass("handle-on-submenu-open");
         document.querySelector("#"+menu_to_open).classList.add("submenu-open");
-        $("#"+menu_to_open).slideDown(500);
+        $("#"+menu_to_open).slideDown(140);
         document.querySelector("#"+handle).parentElement.classList.add("handle-on-submenu-open");
         $(".navbar_mobile .menu_div .menu-list-option i").addClass("fa-angle-down");
         $(".navbar_mobile .menu_div .menu-list-option i").removeClass("fa-angle-up");
@@ -73,38 +73,54 @@ document.addEventListener("click",function(evt){
 
 
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    let elements = document.querySelector(".skiptranslate");
-    if(elements.childNodes.length > 1){
-        for(let i=1;i<elements.childNodes.length;i++){
-            elements.removeChild(elements.childNodes[i]);
-        }
+    try{
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
     }
-    let element = document.querySelector(".skiptranslate span");
-    element.remove();
+    catch(e){
+    }
+    let interval = setInterval(function(){
+        let elements = document.querySelectorAll(".goog-te-combo");
+        if(elements.length > 0){
+            clearInterval(interval);
+            elements = elements[0].parentElement.parentElement;
+            if(elements.childNodes.length > 1){
+                for(let i=1;i<elements.childNodes.length;i++){
+                    elements.removeChild(elements.childNodes[i]);
+                }
+                
+                elements.removeChild(elements.childNodes[1]);
+            }
 
-    setTimeout(function(){
-        let found_de = 0;
-        let options = document.querySelector(".goog-te-combo").childNodes;
-        // console.log(options.length);
-        for(let i=0;i<options.length;i++){
-            if(options[i] == "de"){
-                found_de = 1;
-                break;
+            let found_de = 0;
+            let options = document.querySelector(".goog-te-combo").childNodes;
+            // console.log(options.length);
+            for(let i=0;i<options.length;i++){
+                if(options[i] == "de"){
+                    found_de = 1;
+                    break;
+                }
+            }
+            if(found_de == 0){
+                let new_option = document.createElement("option");
+                new_option.value = "de";
+                new_option.innerHTML = "German";
+                document.querySelector(".goog-te-combo").appendChild(new_option);
             }
         }
-        if(found_de == 0){
-            let new_option = document.createElement("option");
-            new_option.value = "de";
-            new_option.innerHTML = "German";
-            document.querySelector(".goog-te-combo").appendChild(new_option);
-        }
-    },3000);
+    },100);
 
 }
 
-
 document.addEventListener("DOMContentLoaded",function(evt){
+    googleTranslateElementInit();
+
+    //itinerary_categories_cards hover effect
+    if(document.getElementsByClassName("itinerary_categories_cards")[0] != null){
+        $(".itinerary_categories_cards .card").hover(function(evt){
+            let img = $(this)[0].childNodes[1].childNodes[1];
+            img.classList.toggle("hover");
+        });
+    }
 });
 
 
@@ -200,9 +216,10 @@ function updateTab(tab_id){
     title = tab_id+"_title";
     tab = tab_id+"_tab";
     console.log(tab);
-    document.querySelector("#details_tab #"+title).classList.toggle("tabs_title_active");
-    $("#details_tab .tabs_content").hide();
-    $("#details_tab #"+tab).addClass("tabs_content_active");
+    $("#details_tab .tabs_title").removeClass("title_active");
+    $("#details_tab #"+title).addClass("title_active");
+    $("#details_tab .tabs_content").removeClass("content_active");
+    $("#details_tab #"+tab).addClass("content_active");
 }
 
 // city page scripting end

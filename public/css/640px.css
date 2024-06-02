@@ -83,7 +83,14 @@
     margin:15px 5px;
   }
 
-  .card-container .card {
+  .itinerary_categories_cards .card {
+    width:48%;
+    margin:10px 5px;
+  }
+  
+  
+
+  .blog .card-container .card {
     width: 48%;
     margin: 15px 5px;
   }
@@ -96,7 +103,6 @@
     justify-content:space-between;
     align-items:flex-start;
     padding:0 50px;
-    margin: 0;
     /* background:url('/public/images/desert-transparent.jpg'); */
     background-size:cover;
     background-position:top;
