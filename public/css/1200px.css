@@ -4,22 +4,17 @@
     font-size: 16px;
     padding:0;
     margin:10px 18px;
-  }  
+  }
   
   .itineraries_cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:stretch;
     margin:0;
     padding:0;
   }
 
-  .itineraries_cards .card {
-    width:23%;
-    height: auto;
-    margin:15px 10px;
-  }
 
   .itinerary_categories_cards {
     display: flex;
@@ -30,11 +25,20 @@
     padding:0;
   }
 
-  .itinerary_categories_cards .card {
-    width:23%;
+  
+  .itineraries_cards .card {
+    width:23.5%;
     height: auto;
-    margin:15px 10px;
+    margin:15px 10px 15px 0;
   }
+
+  
+  .itinerary_categories_cards .card {
+    width:15%;
+    margin:10px 16px 10px 0;
+  }
+
+  
   
   .blog .card-container .card {
     width:31%;

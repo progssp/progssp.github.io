@@ -352,13 +352,14 @@ body{
 .home_slider {
   width:auto;
   height:60%;
+  z-index:0;
 }
 
 .home_slider .swiper-slide {
   padding:0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   background-position:top;
   background-repeat: no-repeat;
   background-size:cover;
@@ -403,6 +404,7 @@ body{
 
 .about{
   padding:10px 50px;
+  margin-top:50px;
 }
 .about .title {
   color:rgb(83, 83, 83);
@@ -601,7 +603,7 @@ body{
   justify-content:center;
   align-items: stretch;
   margin:0;
-  padding:15px;
+  padding:0;
 }
 
 
@@ -609,9 +611,9 @@ body{
   display: inline-block;
   vertical-align:baseline;
   cursor: pointer;
-  width:99vh;
+  width:95%;
   height: auto;
-  margin:15px auto;
+  margin:15px 0;
   padding:0;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
@@ -625,11 +627,42 @@ body{
 
 .itineraries_cards .card .card-body {
   width:auto;
-  height:300px;
   border-radius: 10px 10px 0 0;
   background-position:center;
   background-repeat: no-repeat;
   background-size:105%;
+  padding:10px;
+}
+.itineraries_cards .card .card-body .itinerary_info_container {
+  display: flex;flex-direction: row;flex-wrap: wrap;justify-content:center;
+}
+
+.itineraries_cards .card .card-body .itinerary_info_container .img_container{
+  width:40%;margin-right: 10px;
+}
+
+.itineraries_cards .card .card-body .itinerary_info_container .img_container .img{
+  width:100%;
+  border-radius: 10px;
+}
+
+.itineraries_cards .card .card-body .itinerary_info_container .itinerary_details{
+  width:55%;
+}
+
+.itineraries_cards .card .card-body .itinerary_info_container .itinerary_details .id_title{
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+
+
+.itineraries_cards .card .card-body .itinerary_info_container .itinerary_details .sub_details_container{
+  display: flex;justify-content: space-between;margin-top: 15px;
+}
+
+.itineraries_cards .card .card-body .itinerary_info_container .itinerary_details .sub_details_container div{
+  margin-right: 10px;box-shadow:0 0 1px rgb(0,0,0);padding:5px;width:45%;
 }
 
 
@@ -639,17 +672,12 @@ body{
   margin:0;
 }
 
-.itineraries_cards .card .card-footer .title{
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  color:var(--card-text-color);
-}
 .itineraries_cards .card .card-footer .location{
   display:block;
-  margin-top: 5px;
   font-size: 17px;
   color:var(--card-text-color);
+  background-color: bisque;
+  padding:5px;
 }
 
 .itineraries_cards .card .card-footer .action{
@@ -688,6 +716,7 @@ body{
 
 .itinerary_categories{
   padding:25px 0;
+  background-color: #e4e4e4;
 }
 .itinerary_categories_cards {
   display: flex;
@@ -741,7 +770,7 @@ body{
 
 .itinerary_categories_cards .card .card-footer .title{
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color:var(--card-text-color);
   text-align: center;
@@ -753,7 +782,7 @@ body{
 }
 .itinerary_categories_cards .card .card-footer .action .btn{
   display: inline;
-  font-size: 16px;
+  font-size: 13px;
   padding:8px;
   box-shadow: 0 0 1px rgba(0,0,0,0.52);
   color:var(--button-text-color);
@@ -775,28 +804,30 @@ body{
 
 
 .query_form {
-  background:linear-gradient(to right, rgba(72, 72, 72, 0.5),rgba(0,0,0,0.5)),url('/public/images/desert.jpg');
+  /* background:linear-gradient(to right, rgba(72, 72, 72, 0.5),rgba(0,0,0,0.5)),url('/public/images/desert.jpg'); */
+  background-color: rgba(255, 255, 255, 0.9);
   background-size: cover;
   background-repeat: no-repeat;
   background-position:top;
   z-index:10;
-  width:auto;
   margin:0px 0px 20px 0px;
+  padding:10px 14px;
 }
 .query_form form {
   display: flex;
   flex-wrap: wrap;
   flex-direction:column;
   justify-content: center;
-  padding: 10px;
+  padding:0;
 }
 .query_form form div{
-  margin:10px 10px;
+  margin:5px 0;
 }
 .query_form form div label{
   display: block;
-  font-size: 14px;
-  color: white;
+  font-size: 16px;
+  color: rgb(34, 0, 255);
+  margin-bottom: 3px;
 }
 .query_form form div input[type=date]{
   padding:10px 5px;
@@ -807,19 +838,41 @@ body{
 .query_form form div select{
   padding:10px 5px;
   font-size: 14px;
-  width:101.5%;
-  border: none;
-}
-.query_form form div input[type=number]{
-  padding:10px 5px;
-  font-size: 14px;
   width:100%;
-  border: none;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 5px;
 }
-.query_form form div button[type=submit]{
+.query_form form div input[type=number],.query_form form div input[type=text]{
+  padding:10px 3px;
+  font-size: 14px;
+  width:99%;
+  border-radius: 5px;
+  border: 1px solid rgb(163, 163, 163);
+}
+
+.select2-selection__rendered {
+  line-height: 35px !important;
+}
+  
+.select2-selection {
+  height: 36px !important;
+}
+.select2-selection__arrow {
+  margin-top: 5px;
+}
+
+input[type=date]:focus,
+input[type=number]:active,
+input[type=number]:focus,
+input[type=text]:focus,
+input[type=password]:focus,select{
+  outline: none;
+}
+
+.query_form form div .submit_btn{
   cursor: pointer;
-  padding:9px 14px;
-  margin:15px 0 0 0;
+  padding:10px 14px;
+  margin:18px 0 0 0;
   font-size:20px;
   border-radius: 5px;
   background-color: var(--navbar-button-bgcolor);
@@ -1089,13 +1142,13 @@ body{
 
 
 .tabs_container{
-  border: 1px solid transparent;
-  margin:10px;
-  width:auto;
+  margin:0;
+  padding:0;
 }
 .tabs_container .tabs_title_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .tabs_container .tabs_title_container .tabs_title {
   padding:10px;
@@ -1109,7 +1162,7 @@ body{
   font-size: 14px;
 }
 .tabs_container .tabs_title_container .tabs_title:hover {
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(255, 255, 255);
 }
 .tabs_container .tabs_title_container .title_active {
   background-color: rgb(255, 255, 255);  
@@ -1123,7 +1176,12 @@ body{
   display: none;
 }
 .tabs_container .tabs_content_container .content_active {
+  animation: fadeIn 0.8s;
   display: flex;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .map_container{
   margin:10px;

@@ -12,6 +12,11 @@
     height: 700px;
   }
 
+  .about{
+    padding:0;
+    margin:200px 50px 0 50px;
+  }
+
   
 
   
@@ -38,42 +43,41 @@
   
 
 
-  .itineraries_cards {
-    padding: 0;
+  .itineraries {
+    padding:50px;
+  }
+  .itineraries_cards{
+    justify-content:start;
   }
   .itineraries_cards .card {
-    width:48%;
+    width:31%;
     height: auto;
-    margin:15px 8px;
+    margin:15px 10px;
   }
 
-  .itinerary_categories_cards {
-    padding: 0;
+  .itinerary_categories {
+    padding:50px;
+    margin: 0;
   }
   .itinerary_categories_cards .card {
-    width:48%;
-    height: auto;
-    margin:15px 8px;
+    width:14.7%;
+    margin:10px 16px 10px 0;
   }
   
+  
   .query_form {
-    margin: -50px 50px 0 50px;
-    padding: 20px 0;    
+    margin: -250px 10% 0 10%;
+    padding: 10px;
   }
-
-  .query_form form div input[type=date]{
-    padding:10px 5px;
-    font-size: 16px;
-    width:180px;
-    border: none;
+  .query_form form {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
   }
-
-  .query_form form div select,
-  .query_form form div input[type=number]{
-    padding:10px 5px;
-    font-size: 16px;
-    width:200px;
-    border: none;
+  .query_form form > div {
+    margin:0 10px;
+    width:17%;
   }
 
 

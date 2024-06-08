@@ -113,14 +113,19 @@ function googleTranslateElementInit() {
 
 document.addEventListener("DOMContentLoaded",function(evt){
     googleTranslateElementInit();
-
-    //itinerary_categories_cards hover effect
-    if(document.getElementsByClassName("itinerary_categories_cards")[0] != null){
-        $(".itinerary_categories_cards .card").hover(function(evt){
-            let img = $(this)[0].childNodes[1].childNodes[1];
-            img.classList.toggle("hover");
+    if(document.getElementById("destination") != null){
+        $('#destination').select2({
+            width: '100%', dropdownCssClass: "bigdrop"
         });
     }
+
+    //itinerary_categories_cards hover effect
+    // if(document.getElementsByClassName("itinerary_categories_cards")[0] != null){
+    //     $(".itinerary_categories_cards .card").hover(function(evt){
+    //         let img = $(this)[0].childNodes[1].childNodes[1];
+    //         img.classList.toggle("hover");
+    //     });
+    // }
 });
 
 

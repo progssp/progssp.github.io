@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="public/css/app.css">
     <link rel="stylesheet" href="public/css/fonts.css">
     <link rel="stylesheet" href="public/css/640px.css">
@@ -67,7 +68,7 @@
                     </ul>
                 </div>              
             </div>
-            <div>
+            <!-- <div>
                 <a href="javascript:void(0)" id="iti2_menu_handle" onclick="open_sub_menu(this)">Places <i class="fas fa-angle-down"></i></a>
                 <div style="position: absolute;left:0;width:100%;top:60px;padding:0;margin:0;">
                     <ul class="submenu" id="iti2_menu">
@@ -106,8 +107,8 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
                 <a href="javascript:void(0)" id="iti3_menu_handle" onclick="open_sub_menu(this)">Activities <i class="fas fa-angle-down"></i></a>
                 <div style="position: absolute;left:0;width:100%;top:60px;padding:0;margin:0;">
                     <ul class="submenu" id="iti3_menu">
@@ -135,7 +136,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div><a href="#">Blog</a></div>
             <div><a href="#">Gallery</a></div>
             <div><a href="#">Contact</a></div>
@@ -195,7 +196,7 @@
                 </ul>
                             
             </div>
-            <div class="menu-list-option">
+            <!-- <div class="menu-list-option">
                 
                 <div style="display: flex;justify-content: space-between;cursor: pointer;" id="places_mobile_menu_handle" onclick="open_sub_menu(this)">
                     <div><a href="javascript:void(0)">Places</a></div>
@@ -278,7 +279,7 @@
                     </li>
                 </ul>
                             
-            </div>
+            </div> -->
             <div class="menu-list-option"><a href="#">Blog</a></div>
             <div class="menu-list-option"><a href="#">Group Tours</a></div>
             <div class="menu-list-option"><a href="#">Gallery</a></div>
@@ -309,17 +310,21 @@
                 <span data-swiper-parallax="-300">Explore Flora and fauna</span>
             </div>
         </div>
+        
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div style="position:relative;z-index: 1;margin-top:1px;">
+            <img src="/curv.svg" alt="" style="position:absolute;bottom:0;width: 100%;">
+        </div>
     </div>
     
 
     <section class="query_form">
-        <form action="" method="get">
+        <form method="get">
             <div>
                 <label for="">City</label>
-                <select name="destination">
+                <select name="destination" id="destination">
                     <option>Select City</option>
                     <option value="Delhi">Delhi</option>
                     <option value="Agra">Agra</option>
@@ -335,19 +340,30 @@
             </div>
             <div>
                 <label for="">Start</label>
-                <input type="date" name="" id="" />
+                <div style="position: relative;">
+                    <input type="text" name="" id="from" />
+                    <i style="position: absolute;right: 5px;top:10px;" class="fas fa-calendar"></i>
+                </div>
             </div>
             <div>
                 <label for="">End</label>
-                <input type="date" name="" id="" />
+                <div style="position: relative;">
+                    <input type="text" name="" id="to" />
+                    <i style="position: absolute;right: 5px;top:10px;" class="fas fa-calendar"></i>
+                </div>
             </div>
             <div>
                 <label for="">No. of people</label>
-                <input type="number" name="" id="" />
+                <div style="position: relative;">
+                    <input type="number" name="" id="number" readonly />
+                    <i style="position: absolute;right: 8px;top:11px;" class="fas fa-users"></i>
+                    
+                </div>
             </div>
             <div>
-                <button type="submit"><i class="fas fa-search"></i> Find tours</button>
+                <button type="submit" class="submit_btn"><i class="fas fa-search"></i> Find tours</button>
             </div>
+            <div></div>
         </form>
     </section>
 
@@ -419,6 +435,35 @@
                 
                 
             </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <img src="/public/images/itineraries/golden_triangle.jpg" class="img">
+                </div>
+                
+                <div class="card-footer">
+                    <span class="title">Group Tour</span>
+                    <div class="action">
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <img src="/public/images/itineraries/golden_triangle.jpg" class="img">
+                </div>
+                
+                <div class="card-footer">
+                    <span class="title">Adventure tour</span>
+                    <div class="action">
+                        <button class="btn">Check now</button>
+                    </div>
+                </div>
+                
+                
+            </div>
             
             
             <div class="section-action">
@@ -431,125 +476,371 @@
 
     <section class="itineraries">
         <p class="section-title">Check out the tours we provide</p>
-        <section class="itineraries_cards">
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Golden Triangle</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
+        <div id="details_tab" class="tabs_container" style="width: 100%;">
+            <div class="tabs_title_container">
+                <div id="welcome_title" onclick="updateTab('welcome')" class="tabs_title title_active">
+                    <span>Dummy tab1</span>
                 </div>
-                
-                
-            </div>
-            
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
+                <div id="getting_title" onclick="updateTab('getting')" class="tabs_title">
+                    <span>Dummy tab2</span>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Taste of Rajasthan</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
+                <div id="when_to_visit_title" onclick="updateTab('when_to_visit')" class="tabs_title">
+                    <span>Dummy tab3</span>
+                </div>
+                <div id="accessibility_title" onclick="updateTab('accessibility')" class="tabs_title">
+                    <span>Plan your trip</span>
                 </div>
             </div>
             
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
+            <div class="tabs_content_container">
+                <div class="tabs_content content_active" id="welcome_tab">
+                    <section class="itineraries_cards">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/plan-your-trip.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Plan your trip</span>       
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location" style="text-align: center;">Plan/customize your trip</span>
+                                <div class="action" style="justify-content: center;">
+                                    <button class="btn">Plan now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>  
+                <div class="tabs_content" id="getting_tab">
+                    <section class="itineraries_cards">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </section>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
+                  
+                <div class="tabs_content" id="when_to_visit_tab">
+                    <section class="itineraries_cards">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/golden_triangle.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Golden Triangle</span>
+                                        <div class="sub_details_container">
+                                            <div>
+                                                <span style="display: block;font-size:14px;">Duration</span>
+                                                <span style="font-size:12px;">06N / 07D</span>
+                                            </div>
+                                            <div>
+                                                <span style="display: block;font-size: 14px;">Includes</span>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                                <i style="font-size: 12px;" class="fas fa-mug-hot"></i>
+                                                <i style="font-size: 12px;" class="fas fa-hotel"></i>
+                                                <i style="font-size: 12px;" class="fas fa-taxi"></i>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location">Delhi - Agra - Jaipur</span>
+                                <div class="action">
+                                    <div>
+                                        <span class="cost">USD 1000</span>
+                                    </div>
+                                    <div>
+                                        <button class="btn">Enquire</button>
+                                        <button class="btn">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </section>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Taste of Rajasthan</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
+                  
+                <div class="tabs_content" id="accessibility_tab">
+                    <section class="itineraries_cards">            
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="itinerary_info_container">
+                                    <div class="img_container">
+                                        <img class="img" src="/public/images/itineraries/plan-your-trip.jpg" alt=""/>
+                                    </div>
+                                    <div class="itinerary_details">
+                                        <span class="id_title" style="display: block;">Plan your trip</span>       
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-footer">
+                                <span class="location" style="text-align: center;">Plan/customize your trip</span>
+                                <div class="action" style="justify-content: center;">
+                                    <button class="btn">Plan now</button>
+                                </div>
+                            </div>
+                        </div>   
+            
+                    </section>
+                </div>             
             </div>
             
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="cost">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-
-            
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title" style="text-align: center;">Plan your trip</span>
-                    <span class="location" style="text-align: center;">Plan/customize your trip</span>
-                    <div class="action" style="justify-content: center;">
-                        <button class="btn">Plan now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-action">
-                <button class="btn-secondary">View more</button>
-            </div>
-                
-                
-
-        </section>
+        </div>
+        
     </section>
 
     
 
-    <section class="places_to_visit">
+    <!-- <section class="places_to_visit">
         <p class="section-title">Places to visit</p>
         <div class="swiper places_to_visit_slider">
             <div class="swiper-wrapper">
@@ -603,12 +894,12 @@
         <div class="section-action">
             <button class="btn-secondary">View more</button>
         </div>
-    </section>
+    </section> -->
 
     
     
 
-    <section class="places_to_visit">
+    <!-- <section class="places_to_visit">
         <p class="section-title">Activities you can do in India</p>
         <div class="swiper places_to_visit_slider">
             <div class="swiper-wrapper">
@@ -645,73 +936,9 @@
         <div class="section-action">
             <button class="btn-secondary">View more</button>
         </div>
-    </section>
+    </section> -->
 
-    <section class="itineraries">
-        <p class="section-title">One day tour packages</p>
-        <section class="itineraries_cards">
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/golden_triangle.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Golden Triangle</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-                
-                
-            </div>
-            
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/forts-and-palaces.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Forts & palaces</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/Taste-of-Rajasthan.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title">Taste of Rajasthan</span>
-                    <span class="location">Delhi - Agra - Jaipur</span>
-                    <div class="action">
-                        <span class="location">USD 1000</span>
-                        <button class="btn">Check now</button>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="card">
-                <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url('public/images/itineraries/plan-your-trip.jpg');"></div>
-                
-                <div class="card-footer">
-                    <span class="title" style="text-align: center;">Plan your trip</span>
-                    <span class="location" style="text-align: center;">Plan/customize your trip</span>
-                    <div class="action" style="justify-content: center;">
-                        <button class="btn">Plan now</button>
-                    </div>
-                </div>
-            </div>
-
-                
-                
-
-        </section>
-        <div class="section-action">
-            <button class="btn-secondary">View more</button>
-        </div>
-    </section>    
+     
 
     <section class="popular_cities">
         <p class="section-title" style="color: white;">Popular Cities</p>
@@ -975,6 +1202,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
     <script src="public/js/app.js"></script>
 
     <!-- Swiper JS -->
@@ -1064,7 +1292,7 @@
         });
 
         var swiper = new Swiper(".popular_cities_slider", {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 15,
             // autoplay: {
             //     delay: 5000,
@@ -1143,6 +1371,42 @@
                     slidesPerView: 3,
                     spaceBetween: 15,
                 },
+            }
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var dateFormat = "mm/dd/yy",
+                from = $( "#from" )
+                .datepicker({
+                    minDate: 0,
+                    changeMonth: true,
+                    numberOfMonths: 1,
+                })
+                .on( "change", function() {
+                    to.datepicker( "option", "minDate", getDate( this ),"dateFormat","d MM, y" );
+                }),
+                to = $( "#to" ).datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1
+                })
+                .on( "change", function() {
+                    from.datepicker( "option", "maxDate", getDate( this ) );
+                });
+    
+            function getDate( element ) {
+                var date;
+                try {
+                    date = $.datepicker.parseDate( dateFormat, element.value );
+                } catch( error ) {
+                    date = null;
+                }
+            
+                return date;
             }
         });
     </script>
