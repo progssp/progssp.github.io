@@ -150,7 +150,8 @@ body {
 .navbar_mobile .menu_div .close_btn {
   cursor: pointer;
   align-self: flex-start;
-  background-color:var(--button-bgcolor);
+  background-color: #7AB730;
+  border-color: #7AB730;
   padding: 0 17px;
   border-radius: 10px;
   font-weight:600;
