@@ -1,0 +1,163 @@
+@media screen and (min-width:1024px){
+  .navbar .menu_div {
+    display: flex;
+  }
+
+  .navbar .menu_btn{
+    display:none;
+  }
+
+  .home_slider {
+    width:auto;
+    height: 700px;
+  }
+
+  .about{
+    padding:0;
+    margin:200px 50px 0 50px;
+  }
+
+  
+
+  
+  
+  
+  .places_to_visit_slider {
+    width:auto;
+    height:auto;
+    margin-top: 20px;
+    padding:20px 15px;
+  }
+
+  
+  
+  
+  .popular_cities_slider {
+    width:auto;
+    height:auto;
+    margin-top: 20px;
+    padding:20px 15px;
+  }
+
+
+  
+
+
+  .itineraries {
+    padding:50px;
+  }
+  .itineraries_cards{
+    justify-content:start;
+  }
+  .itineraries_cards .card {
+    width:31%;
+    height: auto;
+    margin:15px 10px;
+  }
+
+  .itinerary_categories {
+    padding:50px;
+    margin: 0;
+  }
+  .itinerary_categories_cards .card {
+    width:14.7%;
+    margin:10px 16px 10px 0;
+  }
+  
+  
+  .query_form {
+    margin: -250px 10% 0 10%;
+    padding: 10px;
+  }
+  .query_form form {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+  }
+  .query_form form > div {
+    margin:0 10px;
+    width:17%;
+  }
+
+
+  .blog .card-container .card {
+    width:48%;
+    margin: 15px auto;
+  }
+
+
+  .footer .under-footer {
+    height:150px;
+  }
+
+
+
+
+
+
+  .reviews .slider .swiper-slide {
+    font-size:1.5em;
+    font-weight: bold;
+    height:400px;
+    overflow-y:hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    text-align: center;
+  }
+
+
+  .modal .modal-container {
+    padding:0 40%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* city page design */
+
+.tabs_container{
+  border: 1px solid transparent;
+  margin:10px;
+  width:50%;
+}
+
+.map_container{
+  margin:10px;
+  width:40%;
+  height:300px;
+}
+/* city page design end */
+
+
+
+
+  
+}
