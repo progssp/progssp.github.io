@@ -9,6 +9,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 		<link rel="stylesheet" href="css/animate.css">
 		
@@ -24,11 +26,11 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<nav style="background-color: #00c0ff;" class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
 			<div class="container">
-				<a class="navbar-brand" href=""><img src="images/logo_dark.png" alt="" style="width:150px;"></a>
+				<a class="navbar-brand" href=""><img src="images/logo_light (2).png" alt="" style="width:150px;"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="oi oi-menu"></span><i class="fa fa-bars" style="color: white;"></i>
+					<span class="oi oi-menu"></span><i class="fa fa-bars" style="color: rgb(0, 0, 0);"></i>
 				</button>
 
 				<div class="collapse navbar-collapse" id="ftco-nav">
@@ -57,8 +59,13 @@
 		</nav>
 		<!-- END nav -->
 	
-		<div class="hero-wrap js-fullheight" style="background-image: url('images/home_slider/slider2.jpg');">
-			<div class="overlay"></div>
+		<div class="hero-wrap">
+			
+			<div class="overlay">
+				<video muted autoplay loop>
+					<source src="india_vid.mp4" type="video/mp4">
+				</video>
+			</div>
 			<div class="container">
 				<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
 					<div class="col-md-7 ftco-animate">
@@ -235,19 +242,16 @@
 
 		<section class="ftco-section services-section">
 			<div class="container">
-				<div class="row d-flex">
-					<div class="col-12 col-xl-6 heading-section p-4 ftco-animate d-flex align-items-center">
+				<div class="row d-flex align-items-center">
+					<div class="col-12 heading-section p-4 ftco-animate d-flex align-items-center">
 						<div class="w-100">
 							<span class="subheading">Welcome to Fortshila</span>
 							<h2 class="mb-4">It's time to start your adventure</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-							A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							<p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p>
+							<!-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> -->
 						</div>
 					</div>
-					<div class="col-12 col-xl-6">
-						<div class="row">
+					<div class="col-12">
+						<!-- <div class="row">
 							<div class="col-12 col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate">
 								<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
 									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
@@ -284,6 +288,55 @@
 									</div>
 								</div>      
 							</div>
+						</div> -->
+						<div class="row p-0">
+							
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-money" style="font-size: 1.5em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Ultimate Flexibility</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-suitcase" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Best Service</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-suitcase" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Ultimate Flexibility</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-globe" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Worldwide reach</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							
+							
 						</div>
 					</div>
 				</div>
@@ -299,7 +352,7 @@
 			</div>
 			<section class="itinerary_categories_cards container">
 				<div class="row">
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest1.jpg" class="img">
@@ -315,7 +368,7 @@
 							
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest2.jpg" class="img">
@@ -332,7 +385,7 @@
 						</div>
 					</div>
 					
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest4.jpg" class="img">
@@ -349,7 +402,7 @@
 						</div>
 					</div>
 					
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest3.jpg" class="img">
@@ -365,7 +418,7 @@
 							
 						</div>
 					</div>
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest5.jpg" class="img">
@@ -382,7 +435,7 @@
 						</div>
 					</div>
 					
-					<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
 						<div class="card">
 							<div class="card-body">
 								<img src="images/popular_cities/dest2.jpg" class="img">
@@ -403,71 +456,78 @@
 			</section>
 		</section>
 
-		<section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
+		
+
+		<section class="popular_cities py-3" style="background-image: url(images/bg_3.jpg);background-position:bottom;background-size: cover;">
 			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-12 heading-section text-center ftco-animate">
-						<span class="subheading">Fortshila Provide Places</span>
-						<h2 class="mb-4">Select Your Destination</h2>
-					</div>
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Destination</span>
+					<h2 class="mb-4">Explore top destinations</h2>
 				</div>
-			</div>
-			<div class="container container-2">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel-destination owl-carousel ftco-animate">
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/popular_cities/jaipur.jpg);">
-										<div class="text">
-											<h3>Jaipur</h3>
-											<span>8 Tours</span>
-										</div>
-									</a>
-								</div>
+				<div class="swiper popular_cities_slider py-5">
+					<div class="swiper-wrapper">
+						
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest1.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="" style="padding: 10px;">
+									<h5 class="text-white">Jaipur</h5>
+									<span>100 Cities</span>
+								</a>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/popular_cities/bikaner.jpg);">
-										<div class="text">
-											<h3>Bikaner</h3>
-											<span>2 Tours</span>
-										</div>
-									</a>
-								</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest2.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Bikaner</h5>
+									<span>100 Cities</span>
+								</a>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/popular_cities/jaisalmer.jpg);">
-										<div class="text">
-											<h3>Jaisalmer</h3>
-											<span>5 Tours</span>
-										</div>
-									</a>
-								</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest3.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Jodhpur</h5>
+									<span>100 Cities</span>
+								</a>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/popular_cities/jodhpur.jpg);">
-										<div class="text">
-											<h3>Jodhpur</h3>
-											<span>5 Tours</span>
-										</div>
-									</a>
-								</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest4.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Udaipur</h5>
+									<span>100 Cities</span>
+								</a>
 							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/popular_cities/udaipur.jpg);">
-										<div class="text">
-											<h3>Udaipur</h3>
-											<span>7 Tours</span>
-										</div>
-									</a>
-								</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest5.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Kota</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest6.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Alwar</h5>
+									<span>100 Cities</span>
+								</a>
 							</div>
 						</div>
 					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<button class="btn btn-primary">View more</button>
 				</div>
 			</div>
 		</section>
@@ -481,7 +541,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/itineraries/golden_triangle.jpg);">
 								<span class="price">$550/person</span>
@@ -501,7 +561,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/itineraries/plan-your-trip.jpg);">
 								<span class="price">$550/person</span>
@@ -521,7 +581,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/itineraries/forts-and-palaces.jpg);">
 								<span class="price">$550/person</span>
@@ -541,8 +601,7 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/destination-4.jpg);">
 								<span class="price">$550/person</span>
@@ -562,7 +621,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/itineraries/Taste-of-Rajasthan.jpg);">
 								<span class="price">$550/person</span>
@@ -582,7 +641,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-xl-4 ftco-animate">
+					<div class="col-md-6 col-xl-3 ftco-animate">
 						<div class="project-wrap">
 							<a href="#" class="img" style="background-image: url(images/destination-6.jpg);">
 								<span class="price">$550/person</span>
@@ -632,112 +691,122 @@
 				</div>
 				<div class="row ftco-animate">
 					<div class="col-md-12">
-						<div class="carousel-testimony owl-carousel">
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Prem Acharya</p>
-												<span class="position"></span>
+						<div class="swiper testimony_slider py-5">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<p class="star">
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+												</p>
+												<p class="mb-4">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
+												<div class="d-flex align-items-center">
+													<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+													<div class="pl-3">
+														<p class="name">Prem Acharya</p>
+														<span class="position"></span>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">&#34;It was a wonderful and incredible experience for us. All your arrangements were up to the mark. All hotels and transportation arrangements were excellent.we were so pleased with our Rajasthan trip that you orgnised. Thank you very much for all your assistance, will contact you again for my future trips.&#34;</p>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Harshvardhan singh Deora</p>
-												<span class="position"></span>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;It was a wonderful and incredible experience for us. All your arrangements were up to the mark. All hotels and transportation arrangements were excellent.we were so pleased with our Rajasthan trip that you orgnised. Thank you very much for all your assistance, will contact you again for my future trips.&#34;</p>
+											<div class="d-flex align-items-center">
+												<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+												<div class="pl-3">
+													<p class="name">Harshvardhan singh Deora</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;Thank you FortShila team for creating our personalized custom Rajasthan tour. We enquired with many tour and travel operators but we ended up choosing FortShila travels because the manager Mr. Janardan was really soft spoken and supportive.&#34;</p>
+											<div class="d-flex align-items-center">
+												<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+												<div class="pl-3">
+													<p class="name">Manish Verma</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;My self sagar ambasana from Jamnagar( Gujarat), for Rajasthan trip, i took services of fortshilla travels , which is very reliable, and reasonable price, and also good service, and I got premium accomodation, so I suggest for best tour packages fortshilla travels is best tour company...💯&#34;</p>
+											<div class="d-flex align-items-center">
+												<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+												<div class="pl-3">
+													<p class="name">Sagar Ambasana</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;We had to travel within a week and we were not able to find any suitable package for our family. Fortshila team was really quick to reply and arrange an economic package for all my family members. Overall it was a very good experience with this tour operator.&#34;</p>
+											<div class="d-flex align-items-center">
+												<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+												<div class="pl-3">
+													<p class="name">Mayank Agarwal</p>
+													<span class="position"></span>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">&#34;Thank you FortShila team for creating our personalized custom Rajasthan tour. We enquired with many tour and travel operators but we ended up choosing FortShila travels because the manager Mr. Janardan was really soft spoken and supportive.&#34;</p>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Manish Verma</p>
-												<span class="position"></span>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">&#34;My self sagar ambasana from Jamnagar( Gujarat), for Rajasthan trip, i took services of fortshilla travels , which is very reliable, and reasonable price, and also good service, and I got premium accomodation, so I suggest for best tour packages fortshilla travels is best tour company...💯&#34;</p>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Sagar Ambasana</p>
-												<span class="position"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-wrap py-4">
-									<div class="text">
-										<p class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</p>
-										<p class="mb-4">&#34;We had to travel within a week and we were not able to find any suitable package for our family. Fortshila team was really quick to reply and arrange an economic package for all my family members. Overall it was a very good experience with this tour operator.&#34;</p>
-										<div class="d-flex align-items-center">
-											<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-											<div class="pl-3">
-												<p class="name">Mayank Agarwal</p>
-												<span class="position"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
@@ -754,7 +823,7 @@
 					</div>
 				</div>
 				<div class="row d-flex">
-					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest1.jpg');">
 							</a>
@@ -764,8 +833,8 @@
 										<span class="day">11</span>
 									</div>
 									<div class="two">
-										<span class="yr">2020</span>
-										<span class="mos">September</span>
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
 									</div>
 								</div>
 								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
@@ -774,7 +843,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest2.jpg');">
 							</a>
@@ -784,8 +853,8 @@
 										<span class="day">11</span>
 									</div>
 									<div class="two">
-										<span class="yr">2020</span>
-										<span class="mos">September</span>
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
 									</div>
 								</div>
 								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
@@ -794,7 +863,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
 						<div class="blog-entry">
 							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest3.jpg');">
 							</a>
@@ -804,8 +873,28 @@
 										<span class="day">11</span>
 									</div>
 									<div class="two">
-										<span class="yr">2020</span>
-										<span class="mos">September</span>
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
+									</div>
+								</div>
+								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
+								<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+								<p><a href="#" class="btn btn-primary">Read more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="blog-entry">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest3.jpg');">
+							</a>
+							<div class="text">
+								<div class="d-flex align-items-center mb-4 topp">
+									<div class="one">
+										<span class="day">11</span>
+									</div>
+									<div class="two">
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
 									</div>
 								</div>
 								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
@@ -836,7 +925,7 @@
 			</div>
 		</section>
 
-		<footer class="ftco-footer bg-bottom ftco-no-pt" style="">
+		<footer class="ftco-footer bg-bottom ftco-no-pt">
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-md-6 col-lg-3 pt-5">
@@ -921,6 +1010,76 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 		<script src="js/google-map.js"></script>
 		<script src="js/main.js"></script>
+		
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".popular_cities_slider", {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				autoplay: {
+				    delay: 5000,
+				    disableOnInteraction: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+				},
+			
+				lazy: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					340: {
+						slidesPerView: 2,
+						spaceBetween: 12,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 18,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 15,
+					},
+				}
+        	});
+
+			var swiper = new Swiper(".testimony_slider", {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				autoplay: {
+				    delay: 5000,
+				    disableOnInteraction: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+				},
+			
+				lazy: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 18,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 18,
+					},
+					1024: {
+						slidesPerView: 3,
+						spaceBetween: 15,
+					}
+				}
+        	});
+		</script>
 
 
 			
