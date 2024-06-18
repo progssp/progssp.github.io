@@ -4,7 +4,7 @@
 		<title>FS</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+		<link rel="shortcut icon" href="images/logo_dark.png" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
@@ -13,7 +13,8 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 		<link rel="stylesheet" href="css/animate.css">
-		
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
 		<link rel="stylesheet" href="css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="css/magnific-popup.css">
@@ -61,7 +62,8 @@
 	
 		<div class="hero-wrap">
 			
-			<div class="overlay">
+			<div class="overlay"></div>
+			<div style="position: absolute;width:100%;z-index: -1;">
 				<video muted autoplay loop>
 					<source src="india_vid.mp4" type="video/mp4">
 				</video>
@@ -73,9 +75,9 @@
 						<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
 						<p class="caps">Travel to the any corner of the world, without going around in circles</p>
 					</div>
-					<a href="#" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<!-- <a href="#" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
 						<span class="fa fa-play"></span>
-					</a>
+					</a> -->
 				</div>
 			</div>
 		</div>
@@ -115,7 +117,7 @@
 														<label for="#">Check-in date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
+															<input readonly type="text" class="form-control" id="from" placeholder="Check In Date">
 														</div>
 													</div>
 												</div>
@@ -124,7 +126,7 @@
 														<label for="#">Check-out date</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
+															<input readonly type="text" class="form-control" id="to" placeholder="Check Out Date">
 														</div>
 													</div>
 												</div>
@@ -706,7 +708,7 @@
 												</p>
 												<p class="mb-4">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
 												<div class="d-flex align-items-center">
-													<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+													<!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
 													<div class="pl-3">
 														<p class="name">Prem Acharya</p>
 														<span class="position"></span>
@@ -729,7 +731,7 @@
 											</p>
 											<p class="mb-4">&#34;It was a wonderful and incredible experience for us. All your arrangements were up to the mark. All hotels and transportation arrangements were excellent.we were so pleased with our Rajasthan trip that you orgnised. Thank you very much for all your assistance, will contact you again for my future trips.&#34;</p>
 											<div class="d-flex align-items-center">
-												<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+												<!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
 												<div class="pl-3">
 													<p class="name">Harshvardhan singh Deora</p>
 													<span class="position"></span>
@@ -751,7 +753,7 @@
 											</p>
 											<p class="mb-4">&#34;Thank you FortShila team for creating our personalized custom Rajasthan tour. We enquired with many tour and travel operators but we ended up choosing FortShila travels because the manager Mr. Janardan was really soft spoken and supportive.&#34;</p>
 											<div class="d-flex align-items-center">
-												<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+												<!-- <div class="user-img" style="background-image: url(images/person_3.jpg)"></div> -->
 												<div class="pl-3">
 													<p class="name">Manish Verma</p>
 													<span class="position"></span>
@@ -773,7 +775,7 @@
 											</p>
 											<p class="mb-4">&#34;My self sagar ambasana from Jamnagar( Gujarat), for Rajasthan trip, i took services of fortshilla travels , which is very reliable, and reasonable price, and also good service, and I got premium accomodation, so I suggest for best tour packages fortshilla travels is best tour company...💯&#34;</p>
 											<div class="d-flex align-items-center">
-												<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+												<!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
 												<div class="pl-3">
 													<p class="name">Sagar Ambasana</p>
 													<span class="position"></span>
@@ -795,7 +797,7 @@
 											</p>
 											<p class="mb-4">&#34;We had to travel within a week and we were not able to find any suitable package for our family. Fortshila team was really quick to reply and arrange an economic package for all my family members. Overall it was a very good experience with this tour operator.&#34;</p>
 											<div class="d-flex align-items-center">
-												<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+												<!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
 												<div class="pl-3">
 													<p class="name">Mayank Agarwal</p>
 													<span class="position"></span>
@@ -930,8 +932,9 @@
 				<div class="row mb-5">
 					<div class="col-md-6 col-lg-3 pt-5">
 						<div class="ftco-footer-widget pt-md-5 mb-4">
-							<h2 class="ftco-heading-2">About</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h2 class="ftco-heading-2 mb-3">About</h2>
+							<a href=""><img src="images/logo_dark.png" alt="" style="width:150px;"></a>
+							<p class="mt-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 							<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 								<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
 								<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -943,12 +946,12 @@
 						<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
 							<h2 class="ftco-heading-2">Infromation</h2>
 							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-								<li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-								<li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-								<li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-								<li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-								<li><a href="#" class="py-2 d-block">Call Us</a></li>
+								<li><a href="#" class="my-3 d-block">Online Enquiry</a></li>
+								<li><a href="#" class="my-3 d-block">General Enquiries</a></li>
+								<li><a href="#" class="my-3 d-block">Booking Conditions</a></li>
+								<li><a href="#" class="my-3 d-block">Privacy and Policy</a></li>
+								<li><a href="#" class="my-3 d-block">Refund Policy</a></li>
+								<li><a href="#" class="my-3 d-block">Call Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -956,12 +959,12 @@
 						<div class="ftco-footer-widget pt-md-5 mb-4">
 							<h2 class="ftco-heading-2">Experience</h2>
 							<ul class="list-unstyled">
-								<li><a href="#" class="py-2 d-block">Adventure</a></li>
-								<li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
-								<li><a href="#" class="py-2 d-block">Beach</a></li>
-								<li><a href="#" class="py-2 d-block">Nature</a></li>
-								<li><a href="#" class="py-2 d-block">Camping</a></li>
-								<li><a href="#" class="py-2 d-block">Party</a></li>
+								<li><a href="#" class="my-3 d-block">Adventure</a></li>
+								<li><a href="#" class="my-3 d-block">Hotel and Restaurant</a></li>
+								<li><a href="#" class="my-3 d-block">Beach</a></li>
+								<li><a href="#" class="my-3 d-block">Nature</a></li>
+								<li><a href="#" class="my-3 d-block">Camping</a></li>
+								<li><a href="#" class="my-3 d-block">Party</a></li>
 							</ul>
 						</div>
 					</div>
@@ -970,9 +973,15 @@
 							<h2 class="ftco-heading-2">Have a Questions?</h2>
 							<div class="block-23 mb-3">
 								<ul>
-									<li><span class="icon fa fa-map-marker"></span><span class="text">India</span></li>
-									<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 8005656317</span></a></li>
-									<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@fortshila.com</span></a></li>
+									<li class="">
+										<span class="icon fa fa-map-marker"></span><span class="text">India</span>
+									</li>
+									<li class="my-0">
+										<a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 8005656317</span></a>
+									</li>
+									<li class="">
+										<a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@fortshila.com</span></a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -1007,8 +1016,8 @@
 		<script src="js/jquery.animateNumber.min.js"></script>
 		<script src="js/bootstrap-datepicker.js"></script>
 		<script src="js/scrollax.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-		<script src="js/google-map.js"></script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+		<!-- <script src="js/google-map.js"></script> -->
 		<script src="js/main.js"></script>
 		
 		<!-- Swiper JS -->
@@ -1023,6 +1032,7 @@
 				},
 				pagination: {
 					el: ".swiper-pagination",
+					clickable: true
 				},
 			
 				lazy: true,
@@ -1056,6 +1066,7 @@
 				},
 				pagination: {
 					el: ".swiper-pagination",
+					clickable: true
 				},
 			
 				lazy: true,
@@ -1080,6 +1091,41 @@
 				}
         	});
 		</script>
+
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<script>
+	$(function() {
+		var dateFormat = "mm/dd/yy",
+			from = $( "#from" )
+			.datepicker({
+				minDate: 0,
+				changeMonth: true,
+				numberOfMonths: 1,
+			})
+			.on( "change", function() {
+				to.datepicker( "option", "minDate", getDate( this ),"dateFormat","d MM, y" );
+			}),
+			to = $( "#to" ).datepicker({
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 1
+			})
+			.on( "change", function() {
+				from.datepicker( "option", "maxDate", getDate( this ) );
+			});
+
+		function getDate( element ) {
+			var date;
+			try {
+				date = $.datepicker.parseDate( dateFormat, element.value );
+			} catch( error ) {
+				date = null;
+			}
+		
+			return date;
+		}
+	});
+</script>
 
 
 			
