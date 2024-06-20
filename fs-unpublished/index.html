@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FS</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="images/logo_dark.png" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark fshila_navbar fshila-navbar-light" id="fshila-navbar">
+			<div class="container">
+				<a class="navbar-brand" href=""><img src="images/logo_light (2).png" alt="" style="width:150px;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fshila-nav" aria-controls="fshila-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="oi oi-menu"></span><i class="fa fa-bars" style="color: rgb(0, 0, 0);"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="fshila-nav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="" class="nav-link">Group Tours</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							  Dropdown
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							  <a class="dropdown-item" href="#">Action</a>
+							  <a class="dropdown-item" href="#">Another action</a>
+							  <div class="dropdown-divider"></div>
+							  <a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						  </li>
+						<li class="nav-item"><a href="" class="nav-link">About</a></li>
+						<!--<li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+						<li class="nav-item"><a href="hotel.html" class="nav-link">Hotel</a></li>
+						<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+						<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END nav -->
+	
+		<div class="hero-wrap">
+			
+			<div class="overlay"></div>
+			<div style="position: absolute;width:100%;z-index: -1;">
+				<video muted autoplay loop>
+					<source src="india_vid.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="container">
+				<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+					<div class="col-md-7 fshila-animate">
+						<span class="subheading">Welcome to Fortshila</span>
+						<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
+						<p class="caps">Travel to the any corner of the world, without going around in circles</p>
+					</div>
+					<!-- <a href="#" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+						<span class="fa fa-play"></span>
+					</a> -->
+				</div>
+			</div>
+		</div>
+
+		<section class="fshila-section fshila-no-pb fshila-no-pt">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="fshila-search d-flex justify-content-center">
+						<div class="row">
+							<div class="col-md-12 nav-link-wrap">
+								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Search Tour</a>
+
+									<!-- <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a> -->
+
+								</div>
+							</div>
+							<div class="col-md-12 tab-wrap">
+								
+								<div class="tab-content" id="v-pills-tabContent">
+
+									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+										<form action="#" class="search-property-1">
+											<div class="row no-gutters">
+												<div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#">Destination</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-search"></span></div>
+															<input type="text" class="form-control" placeholder="Search place">
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+													<div class="form-group p-4">
+														<label for="#">Check-in date</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-calendar"></span></div>
+															<input readonly type="text" class="form-control" id="from" placeholder="Check In Date">
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+													<div class="form-group p-4">
+														<label for="#">Check-out date</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-calendar"></span></div>
+															<input readonly type="text" class="form-control" id="to" placeholder="Check Out Date">
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6 col-md-12 col-lg-3 d-flex">
+													<div class="form-group p-4">
+														<label for="#">No. of people</label>
+														<div class="form-field">
+															<div class="select-wrap">
+																<div class="icon"><span class="fa fa-users"></span></div>
+																<!-- <select name="" id="" class="form-control">
+																	<option value="">$100</option>
+																	<option value="">$10,000</option>
+																	<option value="">$50,000</option>
+																	<option value="">$100,000</option>
+																	<option value="">$200,000</option>
+																	<option value="">$300,000</option>
+																	<option value="">$400,000</option>
+																	<option value="">$500,000</option>
+																	<option value="">$600,000</option>
+																	<option value="">$700,000</option>
+																	<option value="">$800,000</option>
+																	<option value="">$900,000</option>
+																	<option value="">$1,000,000</option>
+																	<option value="">$2,000,000</option>
+																</select> -->
+																<input type="number" class="form-control" placeholder="no. of people">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="form-group d-flex w-100 border-0">
+														<div class="form-field w-100 align-items-center d-flex">
+															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+										<form action="#" class="search-property-1">
+											<div class="row no-gutters">
+												<div class="col-lg d-flex">
+													<div class="form-group p-4 border-0">
+														<label for="#">Destination</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-search"></span></div>
+															<input type="text" class="form-control" placeholder="Search place">
+														</div>
+													</div>
+												</div>
+												<div class="col-lg d-flex">
+													<div class="form-group p-4">
+														<label for="#">Check-in date</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-calendar"></span></div>
+															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
+														</div>
+													</div>
+												</div>
+												<div class="col-lg d-flex">
+													<div class="form-group p-4">
+														<label for="#">Check-out date</label>
+														<div class="form-field">
+															<div class="icon"><span class="fa fa-calendar"></span></div>
+															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
+														</div>
+													</div>
+												</div>
+												<div class="col-lg d-flex">
+													<div class="form-group p-4">
+														<label for="#">Price Limit</label>
+														<div class="form-field">
+															<div class="select-wrap">
+																<div class="icon"><span class="fa fa-chevron-down"></span></div>
+																<select name="" id="" class="form-control">
+																	<option value="">$100</option>
+																	<option value="">$10,000</option>
+																	<option value="">$50,000</option>
+																	<option value="">$100,000</option>
+																	<option value="">$200,000</option>
+																	<option value="">$300,000</option>
+																	<option value="">$400,000</option>
+																	<option value="">$500,000</option>
+																	<option value="">$600,000</option>
+																	<option value="">$700,000</option>
+																	<option value="">$800,000</option>
+																	<option value="">$900,000</option>
+																	<option value="">$1,000,000</option>
+																	<option value="">$2,000,000</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg d-flex">
+													<div class="form-group d-flex w-100 border-0">
+														<div class="form-field w-100 align-items-center d-flex">
+															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary p-0">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="fshila-section services-section">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-12 heading-section p-4 fshila-animate d-flex align-items-center">
+						<div class="w-100">
+							<span class="subheading">Welcome to Fortshila</span>
+							<h2 class="mb-4">It's time to start your adventure</h2>
+							<!-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> -->
+						</div>
+					</div>
+					<div class="col-12">
+						<!-- <div class="row">
+							<div class="col-12 col-md-6 col-lg-6 d-flex align-self-stretch fshila-animate">
+								<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
+									<div class="media-body">
+										<h3 class="heading mb-3">Activities</h3>
+										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+									</div>
+								</div>      
+							</div>
+							<div class="col-12 col-md-6 col-lg-6 d-flex align-self-stretch fshila-animate">
+								<div class="services services-1 color-2 d-block img" style="background-image: url(images/about-1.jpg);">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+									<div class="media-body">
+										<h3 class="heading mb-3">Travel Arrangements</h3>
+										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+									</div>
+								</div>    
+							</div>
+							<div class="col-12 col-md-6 col-lg-6 d-flex align-self-stretch fshila-animate">
+								<div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
+									<div class="media-body">
+										<h3 class="heading mb-3">Private Guide</h3>
+										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+									</div>
+								</div>      
+							</div>
+							<div class="col-12 col-md-6 col-lg-6 d-flex align-self-stretch fshila-animate">
+								<div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
+									<div class="media-body">
+										<h3 class="heading mb-3">Location Manager</h3>
+										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+									</div>
+								</div>      
+							</div>
+						</div> -->
+						<div class="row p-0">
+							
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-money" style="font-size: 1.5em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Ultimate Flexibility</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-suitcase" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Best Service</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-suitcase" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Ultimate Flexibility</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 mb-3">
+								<div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
+									<div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3 px-3 py-2 rounded-sm" style="width:15%;">
+										<i class="fa fa-globe" style="font-size: 1.7em;color:white;"></i>
+									</div>
+									<div class="d-flex flex-column w-100">
+										<h5 class="mt-2">Worldwide reach</h5>
+										<p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="itinerary_categories">
+			<div class="row justify-content-center pb-4">
+				<div class="col-md-12 heading-section text-center fshila-animate">
+					<span class="subheading">Categories</span>
+					<h2 class="mb-4">Personalized Tour categories</h2>
+				</div>
+			</div>
+			<section class="itinerary_categories_cards container">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest1.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Family Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest2.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Wilflife Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest4.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Adventure Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest3.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Group Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest5.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Beach Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="card">
+							<div class="card-body">
+								<img src="images/popular_cities/dest2.jpg" class="img">
+							</div>
+							
+							<div class="card-footer">
+								<span class="title">Honeymoon Tour</span>
+								<div class="action">
+									<button class="btn btn-primary p-2">Check now</button>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+					
+				</div>
+			</section>
+		</section>
+
+		
+
+		<section class="popular_cities py-3">
+			<div class="container">
+				<div class="col-md-12 heading-section text-center fshila-animate">
+					<span class="subheading">Destination</span>
+					<h2 class="mb-4">Explore top destinations</h2>
+				</div>
+				<div class="swiper popular_cities_slider py-5">
+					<div class="swiper-wrapper">
+						
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest1.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="" style="padding: 10px;">
+									<h5 class="text-white">Jaipur</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest2.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Bikaner</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest3.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Jodhpur</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest4.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Udaipur</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest5.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Kota</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="destination-item position-relative overflow-hidden mb-2">
+								<img class="img-fluid" src="images/popular_cities/dest6.jpg" alt="">
+								<a class="destination-overlay text-white text-decoration-none" href="">
+									<h5 class="text-white">Alwar</h5>
+									<span>100 Cities</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<button class="btn btn-primary">View more</button>
+				</div>
+			</div>
+		</section>
+
+		
+
+		<!-- Packages Start -->
+		<div class="container-fluid py-5">
+			<div class="container pt-5 pb-3">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 heading-section text-center fshila-animate">
+						<span class="subheading">Categories</span>
+						<h2 class="mb-4">Personalized Tour categories</h2>
+					</div>
+				</div>
+				<div id="details_tab" class="tabs_container" style="width: 100%;">
+					<div class="tabs_title_container">
+						<div id="tab1_title" onclick="updateTab('tab1')" class="tabs_title title_active">
+							<span>Dummy tab1</span>
+						</div>
+						<div id="tab2_title" onclick="updateTab('tab2')" class="tabs_title">
+							<span>Dummy tab2</span>
+						</div>
+						<div id="tab3_title" onclick="updateTab('tab3')" class="tabs_title">
+							<span>Dummy tab3</span>
+						</div>
+						<div id="tab4_title" onclick="updateTab('tab4')" class="tabs_title">
+							<span>Plan your trip</span>
+						</div>
+					</div>
+					
+					<div class="tabs_content_container">
+						<div class="tabs_content content_active" id="tab1_tab">
+							<div class="row">
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Golden triangle</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Udaipur</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/Taste-of-Rajasthan.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Jodhpur</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Gujarat (Kachch)</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Goa</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs_content" id="tab2_tab">
+							<div class="row">
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Golden triangle</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs_content" id="tab3_tab">
+							<div class="row">
+								
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Goa</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs_content" id="tab4_tab">
+							<div class="row">
+								<div class="col-lg-3 col-md-6 mb-4">
+									<div class="package-item bg-white mb-2">
+										<img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
+										<div class="p-4">
+											<div class="d-flex justify-content-between mb-3">
+												<small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Udaipur</small>
+												<small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+												<small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+											</div>
+											<a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+											<div class="border-top mt-4 pt-4">
+												<div class="d-flex justify-content-between">
+													<h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+													<h5 class="m-0">$350</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<!-- Packages End -->
+
+		
+		
+		
+
+		
+
+		<section class="fshila-section testimony-section bg-bottom" style="background-image: url(images/home_slider/slider3.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-7 text-center heading-section heading-section-white fshila-animate">
+						<span class="subheading">Testimonial</span>
+						<h2 class="mb-4">Tourist Feedback</h2>
+					</div>
+				</div>
+				<div class="row fshila-animate">
+					<div class="col-md-12">
+						<div class="swiper testimony_slider py-5">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<p class="star">
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+													<span class="fa fa-star"></span>
+												</p>
+												<p class="mb-4">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
+												<div class="d-flex align-items-center">
+													<!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
+													<div class="pl-3">
+														<p class="name">Prem Acharya</p>
+														<span class="position"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;It was a wonderful and incredible experience for us. All your arrangements were up to the mark. All hotels and transportation arrangements were excellent.we were so pleased with our Rajasthan trip that you orgnised. Thank you very much for all your assistance, will contact you again for my future trips.&#34;</p>
+											<div class="d-flex align-items-center">
+												<!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
+												<div class="pl-3">
+													<p class="name">Harshvardhan singh Deora</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;Thank you FortShila team for creating our personalized custom Rajasthan tour. We enquired with many tour and travel operators but we ended up choosing FortShila travels because the manager Mr. Janardan was really soft spoken and supportive.&#34;</p>
+											<div class="d-flex align-items-center">
+												<!-- <div class="user-img" style="background-image: url(images/person_3.jpg)"></div> -->
+												<div class="pl-3">
+													<p class="name">Manish Verma</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;My self sagar ambasana from Jamnagar( Gujarat), for Rajasthan trip, i took services of fortshilla travels , which is very reliable, and reasonable price, and also good service, and I got premium accomodation, so I suggest for best tour packages fortshilla travels is best tour company...💯&#34;</p>
+											<div class="d-flex align-items-center">
+												<!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
+												<div class="pl-3">
+													<p class="name">Sagar Ambasana</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div></div>
+								<div class="swiper-slide">
+								<div class="item">
+									<div class="testimony-wrap py-4">
+										<div class="text">
+											<p class="star">
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+												<span class="fa fa-star"></span>
+											</p>
+											<p class="mb-4">&#34;We had to travel within a week and we were not able to find any suitable package for our family. Fortshila team was really quick to reply and arrange an economic package for all my family members. Overall it was a very good experience with this tour operator.&#34;</p>
+											<div class="d-flex align-items-center">
+												<!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
+												<div class="pl-3">
+													<p class="name">Mayank Agarwal</p>
+													<span class="position"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="fshila-section">
+			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 heading-section text-center fshila-animate">
+						<span class="subheading">Our Blog</span>
+						<h2 class="mb-4">Recent Post</h2>
+					</div>
+				</div>
+				<div class="row d-flex">
+					<div class="col-md-6 col-lg-3 d-flex fshila-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest1.jpg');">
+							</a>
+							<div class="text">
+								<div class="d-flex align-items-center mb-4 topp">
+									<div class="one">
+										<span class="day">11</span>
+									</div>
+									<div class="two">
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
+									</div>
+								</div>
+								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
+								<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+								<p><a href="#" class="btn btn-primary">Read more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex fshila-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest2.jpg');">
+							</a>
+							<div class="text">
+								<div class="d-flex align-items-center mb-4 topp">
+									<div class="one">
+										<span class="day">11</span>
+									</div>
+									<div class="two">
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
+									</div>
+								</div>
+								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
+								<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+								<p><a href="#" class="btn btn-primary">Read more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex fshila-animate">
+						<div class="blog-entry">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest3.jpg');">
+							</a>
+							<div class="text">
+								<div class="d-flex align-items-center mb-4 topp">
+									<div class="one">
+										<span class="day">11</span>
+									</div>
+									<div class="two">
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
+									</div>
+								</div>
+								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
+								<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+								<p><a href="#" class="btn btn-primary">Read more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex fshila-animate">
+						<div class="blog-entry">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/popular_cities/dest3.jpg');">
+							</a>
+							<div class="text">
+								<div class="d-flex align-items-center mb-4 topp">
+									<div class="one">
+										<span class="day">11</span>
+									</div>
+									<div class="two">
+										<span class="yr">2024</span>
+										<span class="mos">June</span>
+									</div>
+								</div>
+								<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
+								<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+								<p><a href="#" class="btn btn-primary">Read more</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		
+
+		<section class="fshila-intro fshila-section fshila-no-pt">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center">
+						<div class="img"  style="background-image: url(images/home_slider/slider4.jpg);">
+							<div class="overlay"></div>
+							<h2>We Are Fortshila</h2>
+							<p>We can manage your dream building A small river named Duden flows by their place</p>
+							<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="fshila-footer bg-bottom fshila-no-pt">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-md-6 col-lg-3 pt-5">
+						<div class="fshila-footer-widget pt-md-5 mb-4">
+							<h2 class="fshila-heading-2 mb-3">About</h2>
+							<a href=""><img src="images/logo_dark.png" alt="" style="width:150px;"></a>
+							<p class="mt-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<ul class="fshila-footer-social list-unstyled float-md-left float-lft">
+								<li class="fshila-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li class="fshila-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li class="fshila-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 pt-5">
+						<div class="fshila-footer-widget pt-md-5 mb-4 ml-md-5">
+							<h2 class="fshila-heading-2">Infromation</h2>
+							<ul class="list-unstyled">
+								<li><a href="#" class="my-3 d-block">Online Enquiry</a></li>
+								<li><a href="#" class="my-3 d-block">General Enquiries</a></li>
+								<li><a href="#" class="my-3 d-block">Booking Conditions</a></li>
+								<li><a href="#" class="my-3 d-block">Privacy and Policy</a></li>
+								<li><a href="#" class="my-3 d-block">Refund Policy</a></li>
+								<li><a href="#" class="my-3 d-block">Call Us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 pt-5">
+						<div class="fshila-footer-widget pt-md-5 mb-4">
+							<h2 class="fshila-heading-2">Experience</h2>
+							<ul class="list-unstyled">
+								<li><a href="#" class="my-3 d-block">Adventure</a></li>
+								<li><a href="#" class="my-3 d-block">Hotel and Restaurant</a></li>
+								<li><a href="#" class="my-3 d-block">Beach</a></li>
+								<li><a href="#" class="my-3 d-block">Nature</a></li>
+								<li><a href="#" class="my-3 d-block">Camping</a></li>
+								<li><a href="#" class="my-3 d-block">Party</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 pt-5">
+						<div class="fshila-footer-widget pt-md-5 mb-4">
+							<h2 class="fshila-heading-2">Have a Questions?</h2>
+							<div class="block-23 mb-3">
+								<ul>
+									<li class="">
+										<span class="icon fa fa-map-marker"></span><span class="text">India</span>
+									</li>
+									<li class="my-0">
+										<a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 8005656317</span></a>
+									</li>
+									<li class="">
+										<a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@fortshila.com</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+
+						<p>
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+			
+			
+
+		<!-- loader -->
+		<div id="fshila-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		
+		<script src="js/main.js"></script>
+		
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".popular_cities_slider", {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				autoplay: {
+				    delay: 5000,
+				    disableOnInteraction: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true
+				},
+			
+				lazy: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					340: {
+						slidesPerView: 2,
+						spaceBetween: 12,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 18,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 15,
+					},
+				}
+        	});
+
+			var swiper = new Swiper(".testimony_slider", {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				autoplay: {
+				    delay: 5000,
+				    disableOnInteraction: true,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true
+				},
+			
+				lazy: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 18,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 18,
+					},
+					1024: {
+						slidesPerView: 3,
+						spaceBetween: 15,
+					}
+				}
+        	});
+		</script>
+
+		<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				var dateFormat = "mm/dd/yy",
+					from = $( "#from" )
+					.datepicker({
+						minDate: 0,
+						changeMonth: true,
+						numberOfMonths: 1,
+					})
+					.on( "change", function() {
+						to.datepicker( "option", "minDate", getDate( this ),"dateFormat","d MM, y" );
+					}),
+					to = $( "#to" ).datepicker({
+						defaultDate: "+1w",
+						changeMonth: true,
+						numberOfMonths: 1
+					})
+					.on( "change", function() {
+						from.datepicker( "option", "maxDate", getDate( this ) );
+					});
+
+				function getDate( element ) {
+					var date;
+					try {
+						date = $.datepicker.parseDate( dateFormat, element.value );
+					} catch( error ) {
+						date = null;
+					}
+				
+					return date;
+				}
+			});
+		</script>
+
+
+			
+	</body>
+</html>
