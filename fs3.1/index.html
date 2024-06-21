@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -25,9 +25,9 @@
                 <img src="images/logo_light (2).png" alt="" style="width: 150px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="images/menu_btn (2).svg" style="width: 50px;" alt="">
+                <i class="fa fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -69,19 +69,19 @@
         <section class="query_form">
             <div class="tabs_container" id="form_tabs">
                 <div class="tabs_title_container" style="border: none;">
-                    <div class="tabs_title title_active" style="background-color: white;" id="search_tours_title" onclick="updateTab('search_tours')"><span style="color: var(--primary-color);">Search tours</span></div>
-                    <div class="tabs_title" id="search_taxi_title" onclick="updateTab('search_taxi')"><span>Search taxi</span></div>
+                    <div class="tabs_title title_active" style="padding:0.5em 0;background-color: white;" id="search_tours_title" onclick="updateTab('search_tours')"><span style="color: var(--primary-color);">Search tours</span></div>
+                    <!-- <div class="tabs_title" id="search_taxi_title" onclick="updateTab('search_taxi')"><span>Search taxi</span></div> -->
                 </div>
                 <div class="tabs_content_container" style="background-color: white;margin-top: 0;border-radius: 0 10px 0 0;box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);">
                     <div class="tabs_content content_active" id="search_tours_tab">
                         <form action="" method="get">
-                            <div class="row px-2">
+                            <div class="row p-2">
                                 <div class="mb-3 col-12 col-md-4 col-lg-3">
                                     <div class="form-group">
                                         <label for="">Destination</label>
                                         <div style="position: relative;">
                                             <i class="fa fa-search" style="position: absolute;right:5px;top:10px;"></i>
-                                            <input type="text" value="dskjfh dfjkhdsfjkhd fdsjkf hsdjkf hsdjkf hsdfkj hsdfkj sdkjh" name="" id="" class="form-control" style="padding-right:25px;" placeholder="search place"/>
+                                            <input type="text" value="" name="" id="" class="form-control" style="padding-right:25px;" placeholder="search place"/>
                                         </div>
                                     </div>
                                 </div>
@@ -112,8 +112,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
                             <div class="row mt-1">
                                 <div class="col-12">
@@ -360,7 +358,7 @@
         </div>
     </section>
 
-    <section class="popular_cities py-3 wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
+    <section class="popular_cities wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
         <div class="container">
             <div class="col-md-12 heading-section text-center fshila-animate">
                 <span class="sub-heading">Destination</span>
@@ -435,7 +433,7 @@
     </section>
 
     <!-- Packages Start -->
-    <div class="container-fluid wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
+    <div style="padding:3em 0;" class="container-fluid wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
         <div class="container pt-5 pb-3 bounce-in-bottom">
             <div class="row justify-content-center pb-4">
                 <div class="col-md-12 heading-section text-center fshila-animate">
@@ -461,116 +459,308 @@
                 
                 <div class="tabs_content_container">
                     <div class="tabs_content content_active" id="tab1_tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
-                                    <div class="p-4">
+                        <div class="row w-auto">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Golden triangle</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Udaipur</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/Taste-of-Rajasthan.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Jodhpur</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Gujarat (Kachch)</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Goa</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -579,40 +769,308 @@
                         </div>
                     </div>
                     <div class="tabs_content" id="tab2_tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="">
-                                    <div class="p-4">
+                        <div class="row w-auto">
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Golden triangle</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                        </div>
+                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
+                                                <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                        </div>
+                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
+                                                <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                        </div>
+                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
+                                                <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                        </div>
+                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
+                                                <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -621,41 +1079,155 @@
                         </div>
                     </div>
                     <div class="tabs_content" id="tab3_tab">
-                        <div class="row">
-                            
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
-                                    <div class="p-4">
+                        <div class="row w-auto">
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Goa</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/forts-and-palaces.jpg" alt="">
-                                    <div class="p-4">
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Rajasthan</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                        </div>
+                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
+                                                <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -664,21 +1236,53 @@
                         </div>
                     </div>
                     <div class="tabs_content" id="tab4_tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white mb-2">
-                                    <img class="img-fluid" src="images/itineraries/plan-your-trip.jpg" alt="">
-                                    <div class="p-4">
+                        <div class="row w-auto">
+                            <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
+                                <div class="package-item bg-white">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="w-100">
+                                            <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Udaipur</small>
-                                            <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                            <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
                                         </div>
                                         <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                        <div class="border-top mt-4 pt-4">
+                                        
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-1">
+                                            <div class="border p-1 me-1 w-50">
+                                                <h5 style="font-size: 14px;">Includes</h5>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                                <i class="fa fa-user" style="font-size: 14px;"></i>
+                                            </div>
+                                            <div class="border p-1 w-50">
+                                                <h5 style="font-size: 14px;">Duration</h5>
+                                                1 Day / 1 Night
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
                                                 <h5 class="m-0">$350</h5>
+                                            </div>
+                                        </div>
+                                        <div class="border-top py-2">
+                                            <div class="d-flex justify-content-between mt-1">
+                                                <div>
+                                                    <button class="btn btn-primary">
+                                                        <i class="fa fa-brands fa-whatsapp"></i>
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-primary">Enquire</button>
+                                                    <button class="btn btn-primary">Details</button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -686,6 +1290,7 @@
                             </div>
                         </div>
                     </div>
+                    
 
                 </div>
                 
@@ -695,7 +1300,7 @@
     </div>
     <!-- Packages End -->
 
-    <section class="testimony-section py-4" style="position:relative;background-image: url(images/home_slider/slider4.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;">
+    <section class="testimony-section" style="position:relative;background-image: url(images/home_slider/slider4.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-center pb-4" style="position: relative;z-index: 5;">

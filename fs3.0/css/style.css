@@ -9268,6 +9268,7 @@ h1, h2, h3, h4, h5,
   background: #042654; }
 
 .project-wrap {
+  width: 100%;
   margin-bottom: 30px; }
   .project-wrap .img {
     display: block;
