@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get your viewport dimensions</title>
+</head>
+<body>
+    <h2>You device's viewport dimensions in px</h2>
+    <h5 id="msg"></h5>
+    <script>
+        window.addEventListener("DOMContentLoaded",handleEvent);
+        window.addEventListener("resize",handleEvent);
+
+        function handleEvent(evt){
+            if((evt.type == "DOMContentLoaded") || (evt.type == "resize")){displayMsg();}
+        }
+
+        function displayMsg(){
+            document.getElementById("msg").innerHTML = "Width: "+window.innerWidth+"px, Height: "+window.innerHeight+"px";
+        }
+    </script>
+</body>
+</html>

@@ -32,12 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        Itineraries
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -45,6 +42,18 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Group Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Contact</a>
                     </li>
                 </ul>                
             </div>
@@ -68,11 +77,11 @@
     <div class="container" style="position: relative;z-index: 2;">
         <section class="query_form">
             <div class="tabs_container" id="form_tabs">
-                <div class="tabs_title_container" style="border: none;">
-                    <div class="tabs_title title_active" style="padding:0.5em 0;background-color: white;" id="search_tours_title" onclick="updateTab('search_tours')"><span style="color: var(--primary-color);">Search tours</span></div>
+                <!-- <div class="tabs_title_container" style="border: none;">
+                    <div class="tabs_title title_active" style="padding:0.5em 0;background-color: white;" id="search_tours_title" onclick="updateTab('search_tours')"><span style="color: var(--primary-color);">Search tours</span></div> -->
                     <!-- <div class="tabs_title" id="search_taxi_title" onclick="updateTab('search_taxi')"><span>Search taxi</span></div> -->
-                </div>
-                <div class="tabs_content_container" style="background-color: white;margin-top: 0;border-radius: 0 10px 0 0;box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);">
+                <!-- </div> -->
+                <div class="tabs_content_container" style="background-color: white;margin-top: 0;border-radius:10px 10px 0 0;box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);">
                     <div class="tabs_content content_active" id="search_tours_tab">
                         <form action="" method="get">
                             <div class="row p-2">
@@ -81,7 +90,7 @@
                                         <label for="">Destination</label>
                                         <div style="position: relative;">
                                             <i class="fa fa-search" style="position: absolute;right:5px;top:10px;"></i>
-                                            <input type="text" value="" name="" id="" class="form-control" style="padding-right:25px;" placeholder="search place"/>
+                                            <input type="text" value="" name="destination" id="" class="form-control" style="padding-right:25px;" placeholder="search place"/>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +99,7 @@
                                         <label for="">Start date</label>
                                         <div style="position: relative;">
                                             <i class="fa fa-calendar" style="position: absolute;right:5px;top:10px;"></i>
-                                            <input readonly type="text" name="" id="" class="form-control" style="padding-right: 25px;" placeholder="search place"/>
+                                            <input readonly type="text" name="start_date" id="" class="form-control" style="padding-right: 25px;" placeholder="search place"/>
                                         </div>
                                     </div>
                                 </div>
@@ -99,16 +108,54 @@
                                         <label for="">End date</label>
                                         <div style="position: relative;">
                                             <i class="fa fa-calendar" style="position: absolute;right:5px;top:10px;"></i>
-                                            <input readonly type="text" name="" id="" class="form-control" style="padding-right: 25px;" placeholder="search place"/>
+                                            <input readonly type="text" name="end_date" id="" class="form-control" style="padding-right: 25px;" placeholder="search place"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mb-3 col-12 col-md-4 col-lg-3">
-                                    <div class="form-group">
+                                    <div class="form-group position-relative dropdown">
                                         <label for="">No. of people</label>
                                         <div style="position: relative;">
                                             <i class="fa fa-users" style="position: absolute;right:5px;top:10px;"></i>
-                                            <input type="number" name="" id="" class="form-control" style="padding-right: 25px;" placeholder="search place"/>
+                                            <input type="text" readonly class="form-control text-start" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            placeholder="Select no. of people"
+                                            />
+                                            
+                                            <div class="dropdown-menu position-absolute p-2 w-100 shadow" aria-labelledby="dropdownMenuButton">
+                                                <div class="form-group">
+                                                    <label for="">Adult</label>
+                                                    <select name="adult" id="adult" class="form-control" style="padding-right: 25px;" onchange="trigger_total()">
+                                                        <option value="0" selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <label for="">Child</label>
+                                                    <select name="child" id="child" class="form-control" style="padding-right: 25px;" onchange="trigger_total()">
+                                                        <option value="0" selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <label for="">Infant</label>
+                                                    <select name="infant" id="infant" class="form-control" style="padding-right: 25px;" onchange="trigger_total()">
+                                                        <option value="0" selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -174,6 +221,8 @@
         </section>
     </div>
 
+    
+
     <section class="service-section wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
         
         <div class="container">
@@ -190,10 +239,11 @@
                             <div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-start me-3 p-0 rounded-sm">
                                     <!-- <i class="fa fa-money" style="font-size: 1.5em;color:white;"></i> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" xml:space="preserve" height="80" width="80"><path fill="#18CEF6" d="M42.849 19.788S24.728 37.753 18.006 44.251c-6.723 6.498-2.434 7.834-.897 9.745 0 0 6.915 9.173 11.141 11.658 4.226 2.484 7.491 2.293 9.796.382 2.305-1.911 26.945-26.602 26.945-26.602l1.1-22.13-23.242 2.484zm9.733 11.977c-2.263 0-4.098-1.826-4.098-4.077s1.834-4.077 4.098-4.077 4.098 1.825 4.098 4.077-1.835 4.077-4.098 4.077z"/><path fill="#233251" d="m66.949 12.109-26.741 2.07-26.519 26.384A9.075 9.075 0 0 0 11 47.019a9.079 9.079 0 0 0 2.689 6.455L26.61 66.328A9.177 9.177 0 0 0 33.098 69h.007a9.193 9.193 0 0 0 6.48-2.67l26.521-26.384 2.184-27.943-1.341.106zM63.874 38.92 37.956 64.707a6.867 6.867 0 0 1-4.858 1.999 6.857 6.857 0 0 1-4.859-1.999L15.319 51.85a6.795 6.795 0 0 1-2.013-4.832 6.787 6.787 0 0 1 2.013-4.833L41.236 16.4l24.548-1.902-1.91 24.422zM52.48 32.779a5.398 5.398 0 0 0 3.81-1.568l-.814-.812.816.811a5.349 5.349 0 0 0-.002-7.579 5.393 5.393 0 0 0-3.808-1.568 5.384 5.384 0 0 0-3.811 1.57 5.322 5.322 0 0 0-1.578 3.788c0 1.367.529 2.744 1.578 3.79a5.397 5.397 0 0 0 3.809 1.568zm-2.18-7.524a3.08 3.08 0 0 1 2.182-.902 3.077 3.077 0 0 1 2.179.9 3.061 3.061 0 0 1-.001 4.337 3.086 3.086 0 0 1-2.179.895 3.065 3.065 0 0 1-2.177-.897 3.04 3.04 0 0 1-.905-2.168c.001-.79.298-1.568.901-2.165z"/></svg>
+                                    <img src="images/transport.svg" alt="" style="width:80px;">
+                                    
                                 </div>
                                 <div class="d-flex flex-column w-100">
-                                    <h5 class="mt-2">Ultimate Flexibility</h5>
+                                    <h5 class="mt-2">Tranportation</h5>
                                     <p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
                                 </div>
                             </div>
@@ -202,10 +252,10 @@
                             <div class="service_card p-3 d-flex mb-lg-0 flex-md-column">
                                 <div class="d-flex flex-shrink-0 align-items-center justify-content-start me-3 p-0 rounded-sm">
                                     <!-- <i class="fa fa-suitcase" style="font-size: 1.7em;color:white;"></i> -->
-                                     <svg version="1.1" id="Icon_Set" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 64 64" width="80" height="80" style="enable-background:new 0 0 64 64" xml:space="preserve"><style>.st1{fill:#263238}</style><path class="st1" d="M23.132 55.429a.5.5 0 0 1-.354-.853l3.217-3.217a5.488 5.488 0 0 1 1.697-1.155l6.275-2.727a9.493 9.493 0 0 0 4.028-3.311l9.093-13.152a.498.498 0 1 1 .822.568l-9.093 13.152a10.5 10.5 0 0 1-4.452 3.659L28.09 51.12a4.508 4.508 0 0 0-1.389.945l-3.217 3.217a.491.491 0 0 1-.352.147zM31.475 40.603a5.48 5.48 0 0 1-2.041-.394l-1.697-.679a5.468 5.468 0 0 1-3.013-2.94l-2.184-5.096a.5.5 0 1 1 .919-.393l2.184 5.096a4.473 4.473 0 0 0 2.465 2.405l1.697.679a4.478 4.478 0 0 0 2.554.235l1.777-.356a4.508 4.508 0 0 0 2.61-1.575l5.365-6.603a.501.501 0 0 1 .777.631l-5.365 6.603a5.51 5.51 0 0 1-3.19 1.924l-1.777.356a5.496 5.496 0 0 1-1.081.107zM15 47.297a.5.5 0 0 1-.354-.853l2.502-2.502a6.98 6.98 0 0 0 2.019-5.613l-.665-6.983a.5.5 0 0 1 .45-.545.49.49 0 0 1 .545.45l.665 6.983a7.974 7.974 0 0 1-2.307 6.415l-2.502 2.502a.494.494 0 0 1-.353.146z"/><path d="m7.222 52.454 10.253 10.253a.999.999 0 0 0 1.414 0l3.889-3.889a.999.999 0 0 0 0-1.414L12.525 47.151a.999.999 0 0 0-1.414 0L7.222 51.04a.999.999 0 0 0 0 1.414z" style="fill:#40c4ff"/><path class="st1" d="M18.182 63.5a1.49 1.49 0 0 1-1.061-.439L6.868 52.808a1.504 1.504 0 0 1 0-2.122l3.89-3.889c.567-.566 1.555-.566 2.122 0L23.132 57.05a1.503 1.503 0 0 1 0 2.121l-3.89 3.889c-.283.284-.659.44-1.06.44zM7.575 52.101l10.253 10.253a.512.512 0 0 0 .707 0l3.889-3.889a.502.502 0 0 0 0-.707L12.171 47.504a.514.514 0 0 0-.707 0l-3.889 3.889a.502.502 0 0 0 0 .708zM56.5 29.797h-49c-.827 0-1.5-.673-1.5-1.5v-2c0-.827.673-1.5 1.5-1.5h49c.827 0 1.5.673 1.5 1.5v2c0 .828-.673 1.5-1.5 1.5zm-49-4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h49a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-49zM32.135 38.4a.5.5 0 0 1-.388-.816l5.365-6.603a.501.501 0 0 1 .777.631l-5.365 6.603a.502.502 0 0 1-.389.185z"/><path style="fill:#ffd740" d="M45.5 23.297V9.412l-6 4.5-7.5-9-7.5 9-6-4.5v13.885"/><path class="st1" d="M45.5 23.797a.5.5 0 0 1-.5-.5V10.412l-5.2 3.9a.498.498 0 0 1-.684-.08L32 5.693l-7.116 8.539a.501.501 0 0 1-.684.08l-5.2-3.9v12.885a.5.5 0 0 1-1 0V9.412a.5.5 0 0 1 .799-.4l5.62 4.215 7.196-8.635a.518.518 0 0 1 .769 0l7.196 8.635 5.62-4.215a.502.502 0 0 1 .8.4v13.885a.5.5 0 0 1-.5.5z"/><path class="st1" d="M45.5 20.797h-27a.5.5 0 0 1 0-1h27a.5.5 0 0 1 0 1z"/><circle cx="32" cy="13.412" r="2.5" style="fill:#ff5252"/><path class="st1" d="M32 16.412c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zm0-5c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2zM50.5 9.5a.5.5 0 0 1-.474-.342L49.473 7.5A2.345 2.345 0 0 0 48 6.027l-1.658-.553a.5.5 0 0 1 0-.948L48 3.973A2.345 2.345 0 0 0 49.473 2.5l.553-1.658c.136-.408.812-.408.948 0l.553 1.658A2.345 2.345 0 0 0 53 3.973l1.658.553a.5.5 0 0 1 0 .948L53 6.027A2.345 2.345 0 0 0 51.527 7.5l-.553 1.658a.5.5 0 0 1-.474.342zM48.081 5l.235.079a3.349 3.349 0 0 1 2.105 2.105l.079.235.079-.235a3.349 3.349 0 0 1 2.105-2.105L52.919 5l-.235-.079a3.349 3.349 0 0 1-2.105-2.105l-.079-.235-.079.235a3.349 3.349 0 0 1-2.105 2.105L48.081 5z"/><g><path class="st1" d="M52.5 52.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1z"/></g><g><path class="st1" d="M49.5 52.5h-11a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1z"/></g><g><path class="st1" d="M47.5 55.5h-13a.5.5 0 0 1 0-1h13a.5.5 0 0 1 0 1z"/></g></svg>
+                                     <img src="images/guidance.svg" alt="" style="width:80px;">
                                 </div>
                                 <div class="d-flex flex-column w-100">
-                                    <h5 class="mt-2">Best Service</h5>
+                                    <h5 class="mt-2">Tour guide</h5>
                                     <p class="m-0" style="font-size: 14px;">We offer touring packages and services that can be altered as per the needs of our customers.</p>
                                 </div>
                             </div>
@@ -461,7 +511,7 @@
                     <div class="tabs_content content_active" id="tab1_tab">
                         <div class="row w-auto">
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -470,9 +520,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -490,8 +541,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -512,7 +562,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -521,9 +571,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -541,8 +592,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -563,7 +613,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -572,9 +622,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -592,8 +643,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -614,7 +664,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -623,9 +673,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -643,8 +694,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -665,7 +715,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -674,9 +724,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -694,8 +745,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -716,7 +766,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -725,9 +775,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -745,8 +796,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -771,7 +821,7 @@
                     <div class="tabs_content" id="tab2_tab">
                         <div class="row w-auto">
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -780,9 +830,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -800,8 +851,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -822,7 +872,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -831,9 +881,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -851,8 +902,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -873,7 +923,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -882,9 +932,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -902,8 +953,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -924,7 +974,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -933,9 +983,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -953,8 +1004,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -975,7 +1025,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -984,9 +1034,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1004,8 +1055,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1026,7 +1076,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -1035,9 +1085,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1055,8 +1106,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1081,7 +1131,7 @@
                     <div class="tabs_content" id="tab3_tab">
                         <div class="row w-auto">
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -1090,9 +1140,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1110,8 +1161,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1132,7 +1182,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -1141,9 +1191,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1161,8 +1212,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1183,7 +1233,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -1192,9 +1242,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1212,8 +1263,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1238,7 +1288,7 @@
                     <div class="tabs_content" id="tab4_tab">
                         <div class="row w-auto">
                             <div class="col-xl-3 col-lg-3 col-md-6 mb-4">
-                                <div class="package-item bg-white">
+                                <div class="package-container bg-white">
                                     <div class="d-flex justify-content-between">
                                         <div class="w-100">
                                             <img class="img-fluid" src="images/itineraries/golden_triangle.jpg" alt="" />
@@ -1247,9 +1297,10 @@
                                     
                                     <div class="p-3">
                                         <div class="d-flex justify-content-between mb-3">
-                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Golden triangle</small>
+                                            <small class="m-0"><i class="fa fa-map-marker text-primary me-1"></i>Delhi, Agra, Jaipur</small>                         
+                                            <h5 class="m-0">$350</h5>
                                         </div>
-                                        <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                                        <a class="h5 text-decoration-none" href="">Golden triangle</a>
                                         
                                         
                                         <div class="d-flex justify-content-between align-items-center mt-1">
@@ -1267,8 +1318,7 @@
                                         </div>
                                         <div class="mt-1 py-2">
                                             <div class="d-flex justify-content-between">
-                                                <h6 class="m-0"><i class="fa fa-star text-primary me-1"></i>4.5 <small>(250)</small></h6>
-                                                <h5 class="m-0">$350</h5>
+                                                
                                             </div>
                                         </div>
                                         <div class="border-top py-2">
@@ -1300,8 +1350,106 @@
     </div>
     <!-- Packages End -->
 
-    <section class="testimony-section" style="position:relative;background-image: url(images/home_slider/slider4.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;">
-        <div class="overlay"></div>
+     <!-- blog Start -->
+     <div style="padding:3em 0;" class="container-fluid wow bounceInUp" data-wow-duration="1.0s" data-wow-delay="0.3s">
+        <div class="container pt-5 pb-3 bounce-in-bottom">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-12 heading-section text-center fshila-animate">
+                    <span class="sub-heading">Blog</span>
+                    <h2 class="heading">Read interesting experiences</h2>
+                </div>
+            </div>
+            <div class="row w-auto">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                    <div class="package-container bg-white">
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100">
+                                <img class="img-fluid" src="images/home_slider/slider1.jpg" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="p-3">                            
+                            <a class="h5 text-decoration-none" href="">sample blog title</a>
+                            
+                            <div class="border-top py-2 mt-2">
+                                <div class="d-flex justify-content-between mt-1">
+                                    <div>
+                                        <button class="btn btn-primary">Read more</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                    <div class="package-container bg-white">
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100">
+                                <img class="img-fluid" src="images/home_slider/slider2.jpg" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="p-3">                            
+                            <a class="h5 text-decoration-none" href="">sample blog title</a>
+                            
+                            <div class="border-top py-2 mt-2">
+                                <div class="d-flex justify-content-between mt-1">
+                                    <div>
+                                        <button class="btn btn-primary">Read more</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                    <div class="package-container bg-white">
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100">
+                                <img class="img-fluid" src="images/home_slider/slider3.jpg" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="p-3">                            
+                            <a class="h5 text-decoration-none" href="">sample blog title</a>
+                            
+                            <div class="border-top py-2 mt-2">
+                                <div class="d-flex justify-content-between mt-1">
+                                    <div>
+                                        <button class="btn btn-primary">Read more</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                    <div class="package-container bg-white">
+                        <div class="d-flex justify-content-between">
+                            <div class="w-100">
+                                <img class="img-fluid" src="images/home_slider/slider4.jpg" alt="" />
+                            </div>
+                        </div>
+                        
+                        <div class="p-3">                            
+                            <a class="h5 text-decoration-none" href="">sample blog title</a>
+                            
+                            <div class="border-top py-2 mt-2">
+                                <div class="d-flex justify-content-between mt-1">
+                                    <div>
+                                        <button class="btn btn-primary">Read more</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <section class="testimony-section">
         <div class="container">
             <div class="row justify-content-center pb-4" style="position: relative;z-index: 5;">
                 <div class="col-md-7 text-center heading-section heading-section-white fshila-animate">
@@ -1309,21 +1457,15 @@
                     <h2 class="heading text-white">Tourist Feedback</h2>
                 </div>
             </div>
-            <div class="row fshila-animate">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="swiper testimony_slider py-5">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="testimony-wrap p-2">
+                                <div class="testimony-container py-4 px-3">
                                     <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
+                                        
+                                        <p class=""">&#34;Hat's off to Fortshila team for arranging a nice tour package of Jodhpur/Pokhran/Jaisalmer for our group of 10 family members (mostly SrCtzns). Raju Bhai,the driver and guide during the entire trip is excellent with his services and thanks a lot to him. Finally I wish all the best to Janardan of Fortshila.&#34;</p>
                                         <div class="d-flex align-items-center">
                                             <!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
                                             <div class="pl-3">
@@ -1336,15 +1478,9 @@
                             </div>
                             <div class="swiper-slide">
                             <div class="item">
-                                <div class="testimony-wrap py-4">
+                                <div class="testimony-container py-4 px-3">
                                     <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
+                                        
                                         <p class="mb-4">&#34;It was a wonderful and incredible experience for us. All your arrangements were up to the mark. All hotels and transportation arrangements were excellent.we were so pleased with our Rajasthan trip that you orgnised. Thank you very much for all your assistance, will contact you again for my future trips.&#34;</p>
                                         <div class="d-flex align-items-center">
                                             <!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
@@ -1358,15 +1494,9 @@
                             </div></div>
                             <div class="swiper-slide">
                             <div class="item">
-                                <div class="testimony-wrap py-4">
+                                <div class="testimony-container py-4 px-3">
                                     <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
+                                        
                                         <p class="mb-4">&#34;Thank you FortShila team for creating our personalized custom Rajasthan tour. We enquired with many tour and travel operators but we ended up choosing FortShila travels because the manager Mr. Janardan was really soft spoken and supportive.&#34;</p>
                                         <div class="d-flex align-items-center">
                                             <!-- <div class="user-img" style="background-image: url(images/person_3.jpg)"></div> -->
@@ -1380,15 +1510,9 @@
                             </div></div>
                             <div class="swiper-slide">
                             <div class="item">
-                                <div class="testimony-wrap py-4">
+                                <div class="testimony-container py-4 px-3">
                                     <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
+                                        
                                         <p class="mb-4">&#34;My self sagar ambasana from Jamnagar( Gujarat), for Rajasthan trip, i took services of fortshilla travels , which is very reliable, and reasonable price, and also good service, and I got premium accomodation, so I suggest for best tour packages fortshilla travels is best tour company...💯&#34;</p>
                                         <div class="d-flex align-items-center">
                                             <!-- <div class="user-img" style="background-image: url(images/person_1.jpg)"></div> -->
@@ -1402,15 +1526,9 @@
                             </div></div>
                             <div class="swiper-slide">
                             <div class="item">
-                                <div class="testimony-wrap py-4">
+                                <div class="testimony-container py-4 px-3">
                                     <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
+                                        
                                         <p class="mb-4">&#34;We had to travel within a week and we were not able to find any suitable package for our family. Fortshila team was really quick to reply and arrange an economic package for all my family members. Overall it was a very good experience with this tour operator.&#34;</p>
                                         <div class="d-flex align-items-center">
                                             <!-- <div class="user-img" style="background-image: url(images/person_2.jpg)"></div> -->
@@ -1431,95 +1549,75 @@
         </div>
     </section>
 
+   
+
     
 
-    <footer class="fshila-footer mt-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="mt-4 col-md-6 col-lg-3">
-                    <div class="fshila-footer-widget pt-md-5 mb-4">
-                        <h2 class="fshila-heading mb-4">About</h2>
-                        <a href=""><img src="images/logo_dark.png" alt="" style="width:150px;"></a>
-                        <p class="mt-3">dummy content here...</p>
-                        <ul class="fshila-footer-social">
-                            <li class="">
-                                <a href="#">
-                                    <span class="fa fa-twitter"></span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="#">
-                                    <span class="fa fa-facebook"></span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="#">
-                                    <span class="fa fa-instagram"></span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="#">
-                                    <span class="fa fa-youtube-play"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4 col-md-6 col-lg-3">
-                    <div class="fshila-footer-widget pt-md-5 mb-4 ml-md-5">
-                        <h2 class="fshila-heading mb-4">Support</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4 col-md-6 col-lg-3">
-                    <div class="fshila-footer-widget pt-md-5 mb-4">
-                        <h2 class="fshila-heading mb-4">More links</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                            <li><a href="#" class="my-3 d-block">Dummy content</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-4 col-md-6 col-lg-3">
-                    <div class="fshila-footer-widget pt-md-5 mb-4">
-                        <h2 class="fshila-heading mb-4">Contact us</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li class="">
-                                    <span class="icon fa fa-map-marker"></span><span class="text">India</span>
-                                </li>
-                                <li class="my-0">
-                                    <a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 8005656317</span></a>
-                                </li>
-                                <li class="">
-                                    <a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@fortshila.com</span></a>
-                                </li>
-                            </ul>
-                        </div>
+    <section class="footer px-5 pt-5 mt-5">
+        <div class="row justify-content-between align-items-start">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-element my-4 mx-3 mx-md-5">
+                    <img src="images/logo_dark.png" class="mb-3 img-fluid" style="width: 150px;"/>
+                    <p>
+                        There are many variations of passages of Lorem the Ipsum available but it is the majority of suffered that a alteration in that some dummy text.
+                    </p>
+                    <div class="mt-3">
+                        <span class="me-2" style="font-size:20px;"><a href="#"><i class="fa fa-brands fa-facebook"></i></a></span>
+                        <span class="me-2" style="font-size:20px;"><a href="#"><i class="fa fa-brands fa-twitter"></i></a></span>
+                        <span class="me-2" style="font-size:20px;"><a href="#"><i class="fa fa-brands fa-youtube"></i></a></span>
+                        <span style="font-size:20px;"><a href="#"><i class="fa fa-brands fa-instagram"></i></a></span>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>
-                        Copyright &copy;2024. All rights reserved
-                    </p>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-element my-4 mx-3 mx-md-5">
+                    <span class="title">Support</span>
+                    <div class="footer-links">
+                        <span><a href="#">Customer support</a></span>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Contact channels</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-element my-4 mx-3 mx-md-5">
+                    <span class="title">More links</span>
+                    <div class="footer-links">
+                        <a href="#">Blog</a>
+                        <a href="#">Itineraries</a>
+                        <a href="#">Group Tours</a>
+                        <a href="#">Gallery</a>
+                        <a href="#">Terms of service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-element my-4 mx-3 mx-md-5">
+                    <span class="title">Contact Info</span>
+                    <div class="footer-links">
+                        <span style="margin:15px 0;">
+                            <i style="display: inline;margin-right: 10px;" class="fa fa-phone"></i>
+                            <a style="display: inline;" href="tel:+918005656317">+91 8005656317</a>
+                        </span>
+                        <span>
+                            <i style="display: inline;margin-right: 10px;" class="fa fa-envelope"></i>
+                            <a href="mailto:info@fortshila.com" style="display: inline;">info@fortshila.com</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <div class="under-footer">
+            <span>&copy; Copyright 2024.</span>
+        </div>
+    </section>
     
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     
     <script src="js/wow.min.js"></script>
 
