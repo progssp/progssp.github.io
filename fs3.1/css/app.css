@@ -390,7 +390,6 @@ button:focus,
 }
 
 .testimony-section {
-    position:relative;
     background:linear-gradient(to right,rgba(4, 38, 84,0.6),rgba(4, 38, 84,0.6),rgba(4, 38, 84,0.6)), url(/fs3.1/images/home_slider/slider4.jpg);
     background-position: center;background-size: cover;
     background-repeat: no-repeat;
@@ -399,7 +398,6 @@ button:focus,
 .testimony-container {
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
 }
 
 
@@ -431,7 +429,6 @@ button:focus,
     margin: 5px 0;
     display: block;
     color: white;
-    width: 100%;
 }
 .footer .footer-links a {
     display: block;
@@ -446,11 +443,10 @@ button:focus,
     align-items: flex-end;
     margin:0;
     padding:0;
-    background: url('/public/images/desert-transparent.jpg');
     background-position:top;
     background-repeat: no-repeat;
     background-size:cover;
-    width:100%;
+    width:auto;
     height:50px;
 }
 .footer .under-footer span{
@@ -468,8 +464,6 @@ button:focus,
 
 .container {
     min-width: 96%;
-    padding-right: 10px;
-    padding-left: 10px;
     margin-right: auto;
     margin-left: auto; 
 }
